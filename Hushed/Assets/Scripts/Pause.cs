@@ -66,7 +66,7 @@ public class PauseManager : MonoBehaviour, IPointerDownHandler
     public void Resume()
     {
         pausePanel.SetActive(false);
-        pauseBtn.SetActive(true);
+        //pauseBtn.SetActive(true);
         Time.timeScale = 1f;
         GameManager.instance.gameState = GameManager.GameState.ACTIVE;
 
@@ -75,7 +75,7 @@ public class PauseManager : MonoBehaviour, IPointerDownHandler
     public void Pause()
     {
         pausePanel.SetActive(true);
-        pauseBtn.SetActive(false);
+        //pauseBtn.SetActive(false);
         GameManager.instance.gameState = GameManager.GameState.PAUSED;
         Time.timeScale = 0f;
     }
@@ -88,8 +88,9 @@ public class PauseManager : MonoBehaviour, IPointerDownHandler
     public void Restart()
     {
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
         GameManager.instance.player.transform.position = GameManager.instance.respawnPoint;
+        Time.timeScale = 1f;
+        StopAllCoroutines();
         GameManager.instance.gameState = GameManager.GameState.ACTIVE;
 
     }

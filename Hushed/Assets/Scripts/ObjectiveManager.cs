@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Objective
-{
-    [TextArea(3, 10)]
-    public string objectiveInfo;
-    public int objectiveID;
-}
-[System.Serializable]
-public class Objectives
-{
-    public List<Objective> objectives = new List<Objective>();
-}
+//public class Objective
+//{
+//    [TextArea(3, 10)]
+//    public string objectiveInfo;
+//    public int objectiveID;
+//}
+//[System.Serializable]
+//public class Objectives
+//{
+//    public List<Objective> objectives = new List<Objective>();
+//}
 
 public class ObjectiveManager : MonoBehaviour
 {

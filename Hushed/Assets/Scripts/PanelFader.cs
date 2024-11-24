@@ -42,10 +42,8 @@ public class PanelFader : MonoBehaviour
         while(counter < Duration)
         {
             counter += Time.unscaledDeltaTime;
-            Debug.Log(Time.deltaTime.ToString());
             canvGroup.alpha = Mathf.Lerp(start, end, counter / Duration);
             yield return null;
         }
-        Debug.Log(Time.deltaTime.ToString());
     }
 }

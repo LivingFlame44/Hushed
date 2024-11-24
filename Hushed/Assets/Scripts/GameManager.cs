@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     public GameObject winPanel, gameOverPanel;
+    public Transform objectivesPanel;
+
+    public GameObject objectiveTextPrefab;
+
+    public int maxPoolCount, currentPoolCount;
 
     public List<GameObject> objectivesList;
     public List<GameObject> KeyQuestionsList;
@@ -44,6 +50,7 @@ public class GameManager : MonoBehaviour
         switch(gameState)
         {
             case GameState.ACTIVE:
+                player.SetActive(true);
                 Time.timeScale = 1f;
                 break;
             case GameState.GAMEOVER:
@@ -71,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void ObjectiveClear(int objectiveID)
     {
         objectivesList[objectiveID].SetActive(false);
-        if (CompletedAllObjectivees(objectivesList) && CompletedAllKeyQuestions())
+        if (CompletedAllObjectives(objectivesList) && CompletedAllKeyQuestions())
         {
             NewObjective(5);
         }
@@ -79,10 +86,14 @@ public class GameManager : MonoBehaviour
 
     public void NewObjective(int objectiveID)
     {
-        objectivesList[objectiveID].SetActive(true);
+        //objectivesList[objectiveID].SetActive(false);
+        GameObject tempText = GetObjectFromPool();
+        tempText.GetComponent<TextMeshProUGUI>().text = "";
+        tempText.GetComponent<Objective>().objectiveID = objectiveID;
+        tempText.SetActive(true);
     }
 
-    public bool CompletedAllObjectivees(List<GameObject> collection)
+    public bool CompletedAllObjectives(List<GameObject> collection)
     {
         for (int i = 0; i < collection.Count; i++)
             if (collection[i].activeSelf)
@@ -100,5 +111,28 @@ public class GameManager : MonoBehaviour
                 return false;
             }
         return true;
+    }
+
+    public GameObject GetObjectFromPool()
+    {
+        if(objectivesList != null)
+        {
+            for(int i = 0;i < objectivesList.Count;i++)
+            {
+                if (!objectivesList[i].activeSelf)
+                {
+                    return objectivesList[i];
+                }
+            }
+            return CreateNewText();
+        }
+        return CreateNewText();
+    }
+
+    public GameObject CreateNewText()
+    {
+        var tempGO = Instantiate(objectiveTextPrefab, objectivesPanel);
+        objectivesList.Add(tempGO); 
+        return tempGO;
     }
 }
