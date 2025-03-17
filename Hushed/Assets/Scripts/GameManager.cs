@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         //objectivesList[objectiveID].SetActive(false);
         GameObject tempText = GetObjectFromPool();
         tempText.GetComponent<TextMeshProUGUI>().text = "";
-        tempText.GetComponent<Objective>().objectiveID = objectiveID;
+        //tempText.GetComponent<Objective>().objectiveID = objectiveID;
         tempText.SetActive(true);
     }
 

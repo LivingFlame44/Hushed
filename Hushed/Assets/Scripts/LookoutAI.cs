@@ -21,7 +21,7 @@ public class LookoutAI : MonoBehaviour
         if (!crRunning && GameManager.instance.gameState != GameManager.GameState.GAMEOVER)
         {
             StartCoroutine(SwitchSide());
-            Debug.Log("SWitch SIdes");
+            //Debug.Log("SWitch SIdes");
         }
     }
 

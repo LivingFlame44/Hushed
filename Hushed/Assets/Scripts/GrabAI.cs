@@ -9,7 +9,7 @@ public class GrabAI : MonoBehaviour
 {
     public GameObject player;
     public float speed;
-    private float counter = 0f;
+ 
     public float breakTime;
     private int grab;
     public GameObject[] arms;
@@ -61,7 +61,8 @@ public class GrabAI : MonoBehaviour
                 player.gameObject.SetActive(false);
                 break;
 
-            case AIState.DOWNED: 
+            case AIState.DOWNED:
+                player.GetComponent<PlayerMovement>().playerState = PlayerMovement.PlayerState.IDLE;
                 this.gameObject.SetActive(false);
                 break;
         }
@@ -82,6 +83,7 @@ public class GrabAI : MonoBehaviour
         {
             player = null;
             aiState = AIState.IDLE;
+            
         }
     }
 
@@ -128,6 +130,7 @@ public class GrabAI : MonoBehaviour
         }
     }
 
+    //not used
     public IEnumerator BreakGrab(int key)
     {
 
@@ -260,6 +263,13 @@ public class GrabAI : MonoBehaviour
                             GameManager.instance.gameState = GameManager.GameState.GAMEOVER;
                         }
                         break;
+                    default:
+                        arms[key].SetActive(false);
+                        aiState = AIState.GRABBED;
+                        GameManager.instance.GameOver();
+                        GameManager.instance.gameState = GameManager.GameState.GAMEOVER;
+                        break;
+                        //remove default if not working
                 }
             }
         }

@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,9 +42,14 @@ public class UIManager : MonoBehaviour
     {
 
     }
-    public void Play()
+    public void Play(string loadLevel)
     {
-        SceneManager.LoadScene("Level 1");
+        AsyncManager.instance.LoadLevelBtn(loadLevel);
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        AsyncManager.instance.LoadScene(sceneName);
     }
 
     public void Settings()

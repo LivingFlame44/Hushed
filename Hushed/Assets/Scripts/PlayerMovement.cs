@@ -38,9 +38,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        //HandleAnimation();
-        Flip();
+        if (playerState != PlayerState.GRABBED)
+        {
+            Movement();
+            //HandleAnimation();
+            Flip();
+        }
+        
 
         switch(playerState)
         {
@@ -53,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
                 speed = 2;
                 break;
             case PlayerState.GRABBED:
+                speed = 0;
                 break;
             case PlayerState.STATIONARY:
                 break;

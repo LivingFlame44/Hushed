@@ -90,6 +90,7 @@ public class PauseManager : MonoBehaviour, IPointerDownHandler
         pausePanel.SetActive(false);
         GameManager.instance.player.transform.position = GameManager.instance.respawnPoint;
         Time.timeScale = 1f;
+        GameManager.instance.player.GetComponent<PlayerMovement>().playerState = PlayerMovement.PlayerState.IDLE;
         StopAllCoroutines();
         GameManager.instance.gameState = GameManager.GameState.ACTIVE;
 
