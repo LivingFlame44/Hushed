@@ -92,7 +92,14 @@ public class DialogueManager : MonoBehaviour
         }
 
         //currentText = lines.Peek().line;
-        currentLine = lines.Dequeue();
+        if(lines.Count == 0){
+            EndDialogue();
+        }
+        else
+        {
+            currentLine = lines.Dequeue();
+        }
+
         if(currentLine.character.icon != null)
         {
             charIcon.gameObject.SetActive(true);
@@ -108,12 +115,14 @@ public class DialogueManager : MonoBehaviour
         if(currentLine.hasChoice)
         {
             DisplayChoices(currentLine.choices);
-        }   
+        }
+
+        currentLine.onEndLineEvent.Invoke();
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(currentLine));
 
-        currentLine.onEndLineEvent.Invoke();
+        
     }
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)
@@ -129,7 +138,9 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         isDialogueActive = false;
+        StopAllCoroutines();
         dialoguePanel.gameObject.SetActive(false);
+        
         dialogueEndEvent.Invoke();
     }
 

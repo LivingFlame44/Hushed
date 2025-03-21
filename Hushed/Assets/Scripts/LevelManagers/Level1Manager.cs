@@ -42,7 +42,7 @@ public class Level1Manager : MonoBehaviour
         if (firstQuestScrollbar.value == 0)
         {
             ObjectiveManager.instance.CompleteObjective(0);
-            Debug.Log("Quest 1 complete");
+            //Debug.Log("Quest 1 complete");
 
             teresitaSprite.SetActive(true);
             ObjectiveManager.instance.CompleteObjective(0);

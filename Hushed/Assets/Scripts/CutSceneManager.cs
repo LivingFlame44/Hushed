@@ -61,8 +61,7 @@ public class CutSceneManager : MonoBehaviour
 
     public IEnumerator TextDisappear(int time, GameObject go)
     {
-        new WaitForSeconds(time);
+        yield return new WaitForSeconds(time);
         go.SetActive(false);
-        yield return null;
     }
 }

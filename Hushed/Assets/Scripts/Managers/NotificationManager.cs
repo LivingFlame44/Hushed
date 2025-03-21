@@ -6,13 +6,20 @@ using TMPro;
 
 public class NotificationManager : MonoBehaviour
 {
-    public GameObject[] notificationList;
+    public GameObject spawnRef;
+    public Vector3 spawnLocation;
+    public GameObject notificationPanel;
+    public GameObject notificationPrefab;
+
+    //public GameObject[] notificationList;
     private bool[] notificationStatusList;
 
+    public List<GameObject> activeNotifList = new List<GameObject>();
+    public List<GameObject> inactiveNotifList = new List<GameObject>();
 
     private string folderPath = "Notifications"; // Folder name inside the Assets/Resources folder
 
-    private Notification[] notificationValuesList;
+    public Notification[] notificationValuesList;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -21,7 +28,7 @@ public class NotificationManager : MonoBehaviour
     }
     void Start()
     {
-        
+        spawnLocation = new Vector3(spawnRef.transform.localPosition.x, spawnRef.transform.localPosition.y, 0);
     }
 
     // Update is called once per frame
@@ -32,13 +39,51 @@ public class NotificationManager : MonoBehaviour
 
     public void ShowNotification(int id)
     {
-        int availableIndex = AvailableNotif();
-        GameObject notif = notificationList[availableIndex];
-        notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x + 50, 
+        Debug.Log("SHow notif");
+        MoveNotificationsDown();
+        if(inactiveNotifList.Count == 0)
+        {
+            GameObject notif = Instantiate(notificationPrefab);
+            notif.transform.SetParent(notificationPanel.transform);
+            notif.transform.position = spawnLocation;
+            activeNotifList.Add(notif);
+
+            notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x + 342,
             notif.GetComponent<Transform>().position.y), 0.25f);
-        StartCoroutine(NotificationCountdown(availableIndex));
+
+            InsertValues(id, notif);
+            StartCoroutine(NotificationCountdown());
+        }
+        else
+        {
+            GameObject notif = inactiveNotifList[0];
+            inactiveNotifList.RemoveAt(0);
+            Debug.Log("SHow notif 2");
+            notif.transform.SetParent(notificationPanel.transform);
+            notif.SetActive(true);
+            activeNotifList.Add(notif);
+            
+            notif.transform.position = spawnLocation;
+            
+
+            notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x + 342,
+            notif.GetComponent<Transform>().position.y), 0.25f);
+
+            InsertValues(id, notif);
+            StartCoroutine(NotificationCountdown());
+        }
+        //int availableIndex = AvailableNotif();
+        //GameObject notif = notificationList[availableIndex];
+        
     }
 
+    public void MoveNotificationsDown()
+    {
+        foreach(GameObject notif in activeNotifList)
+        {
+            notif.transform.position = new Vector3(notif.transform.position.x, notif.transform.position.y - 160, 0);
+        }
+    }
     public void InsertValues(int id, GameObject obj)
     {
         Notification notif = notificationValuesList[id];
@@ -78,17 +123,19 @@ public class NotificationManager : MonoBehaviour
         return 0;       
     }
 
-    public IEnumerator NotificationCountdown(int i)
-    {
-        new WaitForSeconds(5);
-        HideNotification(i);
-        yield return null;
+    public IEnumerator NotificationCountdown()
+    {      
+        yield return new WaitForSeconds(5f);
+        HideNotification();
+        Debug.Log("HIde notif");
     }
-    public void HideNotification(int i)
+    public void HideNotification()
     {
-        GameObject notif = notificationList[i];
-        notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x -50,
-            notif.GetComponent<Transform>().position.y), 0.25f);
-        notificationStatusList[i] = false;
+        GameObject notif = activeNotifList[0];
+        notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().localPosition.x -342,
+            notif.GetComponent<Transform>().localPosition.y), 0.25f);
+        inactiveNotifList.Add(notif);
+        activeNotifList.RemoveAt(0);
+        notif.SetActive(false);
     }
 }

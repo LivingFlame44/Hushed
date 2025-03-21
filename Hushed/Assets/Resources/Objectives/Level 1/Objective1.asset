@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Objective1
   m_EditorClassIdentifier: 
   objectiveID: 1
-  objectiveInfo: 
+  objectiveInfo: Prepare coffee for your client.
   objectiveComplete: 0
   prerequisiteObjectiveIDs: 
   onObjectiveStartEvent:
