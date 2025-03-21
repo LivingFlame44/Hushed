@@ -1493,6 +1493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 108848545}
   menuPanels: []
+  loadingImages: []
   slider: {fileID: 219273389}
 --- !u!1 &2063913077
 GameObject:
