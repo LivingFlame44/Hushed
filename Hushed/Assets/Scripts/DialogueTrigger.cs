@@ -20,6 +20,7 @@ public class DialogueLine
     public string line;
 
     public List<Dialogue1> choices = new List<Dialogue1>();
+    public UnityEvent onEndLineEvent;
 }
 [System.Serializable]
 public class Dialogue1

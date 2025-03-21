@@ -110,6 +110,8 @@ public class ObjectiveManager : MonoBehaviour
         }
         return false;
     }
+
+    //Removes obj from ui and completes quest
     public void CompleteObjective(int id)
     {
         bool questExist = QuestExistCheck(id);

@@ -108,10 +108,12 @@ public class DialogueManager : MonoBehaviour
         if(currentLine.hasChoice)
         {
             DisplayChoices(currentLine.choices);
-        }
+        }   
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(currentLine));
+
+        currentLine.onEndLineEvent.Invoke();
     }
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)

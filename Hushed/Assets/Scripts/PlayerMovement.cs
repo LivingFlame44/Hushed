@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizontal;
     public bool isFacingRight;
 
-    //private Animator animator;
+    private Animator animator;
     private bool isWalking;
 
     //public Transform groundCheck;
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -75,13 +75,16 @@ public class PlayerMovement : MonoBehaviour
         //    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         //}
         isWalking = horizontal != 0 ? true : false;
+        animator.SetFloat("Speed", horizontal != 0 ? 1 : 0);
+        animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);
+
 
     }
 
-    //void HandleAnimation()
-    //{
-    //    animator.SetBool("isWalking", isWalking);
-    //}
+    void HandleAnimation()
+    {
+        animator.SetFloat("Speed", 1);
+    }
 
 
     void Flip()
