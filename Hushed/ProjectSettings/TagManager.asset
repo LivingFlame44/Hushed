@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ClueSlot
+  - EvidenceSlot
+  - KeyQuestionSlot
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - Postprocessing
   - Water
   - UI
-  - 
+  - CanNextDialogue
   - 
   - 
   - 

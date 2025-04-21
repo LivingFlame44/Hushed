@@ -11,7 +11,7 @@ public class CutSceneManager : MonoBehaviour
     public GameObject[] eventPanels;
     public bool[] eventsProgress;
     public int currentEvent = 0;
-
+    
     public string nextSceneName;
     void Start()
     {
@@ -21,7 +21,7 @@ public class CutSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VideoEvent(10, eventPanels[0], 0);
+        VideoEvent(31, eventPanels[0], 0);
 
     }
 
@@ -56,7 +56,7 @@ public class CutSceneManager : MonoBehaviour
     public void ShowText(GameObject go)
     {
         go.SetActive(true);
-        //StartCoroutine(TextDisappear(2, go));
+        StartCoroutine(TextDisappear(3, go));
     }
 
     public IEnumerator TextDisappear(int time, GameObject go)

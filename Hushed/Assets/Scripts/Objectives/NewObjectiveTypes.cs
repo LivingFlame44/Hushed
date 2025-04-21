@@ -1,10 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using static InspectSystem;
 
+//[Serializable]
+//public class MyEvent : UnityEvent { }
 public class NewObjectiveTypes : MonoBehaviour
 {
     public GameObject inspectSystem;
+    public UnityEvent eventOnInspectStop;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,4 +34,11 @@ public class NewObjectiveTypes : MonoBehaviour
         GameObject obj = Instantiate(go, inspectSystem.transform);
         inspectSystem.GetComponent<InspectSystem>().objectToInspect = obj.transform;
     }
+
+    public void AddEventOnInspectStop(OnInspectStop eventOnStop)
+    {
+        inspectSystem.GetComponent<InspectSystem>().onInspectStop = eventOnStop;
+    }
+
+    
 }

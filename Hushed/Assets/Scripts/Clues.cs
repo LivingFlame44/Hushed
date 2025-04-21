@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
-public class Clues : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class Clues : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -132,10 +132,7 @@ public class Clues : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEnd
         transform.position = startPos;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        
-    }
+    
 
     public void RemoveClues()
     {

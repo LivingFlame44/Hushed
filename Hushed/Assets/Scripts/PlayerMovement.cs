@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
         WALKING,
         HIDING,
         GRABBED,
+        PREPARING,
         STATIONARY
     }
 
@@ -24,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private bool isWalking;
 
+    public bool hasCoffee = false;
+
+    public List<string> playerItems;
     //public Transform groundCheck;
     //public LayerMask groundLayer;
 
@@ -38,7 +42,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerState != PlayerState.GRABBED)
+        if (playerState == PlayerState.GRABBED || playerState == PlayerState.STATIONARY || playerState == PlayerState.PREPARING)
+        {
+            
+        }
+        else
         {
             Movement();
             //HandleAnimation();
@@ -61,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case PlayerState.STATIONARY:
                 break;
+            case PlayerState.PREPARING:
+                break;
             default:
                 speed = 6f;
                 break;
@@ -79,6 +89,16 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);
 
 
+    }
+
+    public void GetItem(string item)
+    {
+        playerItems.Add(item);
+    }
+
+    public void RemoveItem(string item)
+    {
+        playerItems.Remove(item);
     }
 
     void HandleAnimation()

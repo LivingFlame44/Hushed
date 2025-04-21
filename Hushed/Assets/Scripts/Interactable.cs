@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
     public GameObject interactText;
+    public string interactMessage;
+    public bool priorityText;
+
     public bool interactEnabled = false;
+    public bool interacted = false;
     // Start is called before the first frame update
     void Start()
+    {
+        interactText = this.gameObject.transform.GetChild(0).gameObject;
+    }
+
+    private void Awake()
     {
         interactText = this.gameObject.transform.GetChild(0).gameObject;
     }
@@ -15,22 +25,24 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if(interactEnabled)
+            if (interactEnabled && interacted == false)
             {
                 Interact();
             }      
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
         if(collision.CompareTag("Player"))
         {
-            ShowText();
-            interactEnabled = true;
-            
+            if (interacted == false)
+            {
+                ShowText();
+                interactEnabled = true;
+            }   
         }    
     }
 
@@ -46,12 +58,46 @@ public class Interactable : MonoBehaviour
 
     public virtual void ShowText()
     {
-        interactText.SetActive(true);
+        if(this.isActiveAndEnabled)
+        {
+            interactText.SetActive(true);
+            if (!string.IsNullOrEmpty(interactMessage))
+            {
+                if (priorityText)
+                {
+                    StartCoroutine(SetTextNextFrame());
+                }
+                else
+                {
+                    Debug.Log($"Before: {interactText.GetComponent<TextMeshPro>().text}");
+                    interactText.GetComponent<TextMeshPro>().text = interactMessage;
+                    Debug.Log($"After: {interactText.GetComponent<TextMeshPro>().text}");
+                }
+
+            }
+        }
         
+
+    }
+
+    IEnumerator SetTextNextFrame()
+    {
+        yield return null;
+        if (interactText != null && interactMessage != null)
+        {
+            interactText.GetComponent<TextMeshPro>().text = interactMessage;
+        }
     }
 
     public virtual void Interact()
     {
         Debug.Log("This is base class");
+        interacted = true;
+        interactText.SetActive(false);
+    }
+
+    public void InteractAgain()
+    {
+        interacted = false;
     }
 }

@@ -39,7 +39,7 @@ public class Level1Manager : MonoBehaviour
 
     public void Quest1()
     {
-        if (firstQuestScrollbar.value == 0)
+        if (firstQuestScrollbar.value <= 0)
         {
             ObjectiveManager.instance.CompleteObjective(0);
             //Debug.Log("Quest 1 complete");

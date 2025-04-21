@@ -7,7 +7,7 @@ using TMPro;
 public class NotificationManager : MonoBehaviour
 {
     public GameObject spawnRef;
-    public Vector3 spawnLocation;
+    //public Vector3 spawnLocation;
     public GameObject notificationPanel;
     public GameObject notificationPrefab;
 
@@ -28,7 +28,7 @@ public class NotificationManager : MonoBehaviour
     }
     void Start()
     {
-        spawnLocation = new Vector3(spawnRef.transform.localPosition.x, spawnRef.transform.localPosition.y, 0);
+        //spawnLocation = new Vector3(spawnRef.transform.localPosition.x, spawnRef.transform.localPosition.y, 0);
     }
 
     // Update is called once per frame
@@ -40,37 +40,37 @@ public class NotificationManager : MonoBehaviour
     public void ShowNotification(int id)
     {
         Debug.Log("SHow notif");
-        MoveNotificationsDown();
+        //MoveNotificationsDown();
         if(inactiveNotifList.Count == 0)
         {
             GameObject notif = Instantiate(notificationPrefab);
             notif.transform.SetParent(notificationPanel.transform);
-            notif.transform.position = spawnLocation;
+            //notif.transform.position = spawnLocation;
             activeNotifList.Add(notif);
-
-            notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x + 342,
-            notif.GetComponent<Transform>().position.y), 0.25f);
+            notif.transform.GetChild(0).GetComponent<Transform>().localPosition = new Vector2(0,0);
+            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 342,
+            notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
 
             InsertValues(id, notif);
-            StartCoroutine(NotificationCountdown());
+            StartCoroutine(NotificationCountdown(notif));
         }
         else
         {
             GameObject notif = inactiveNotifList[0];
-            inactiveNotifList.RemoveAt(0);
+            inactiveNotifList.Remove(notif);
             Debug.Log("SHow notif 2");
-            notif.transform.SetParent(notificationPanel.transform);
+            //notif.transform.SetParent(notificationPanel.transform);
             notif.SetActive(true);
             activeNotifList.Add(notif);
             
-            notif.transform.position = spawnLocation;
+            //notif.transform.position = spawnLocation;
             
 
-            notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().position.x + 342,
-            notif.GetComponent<Transform>().position.y), 0.25f);
+            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 342,
+            notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
 
             InsertValues(id, notif);
-            StartCoroutine(NotificationCountdown());
+            StartCoroutine(NotificationCountdown(notif));
         }
         //int availableIndex = AvailableNotif();
         //GameObject notif = notificationList[availableIndex];
@@ -91,23 +91,23 @@ public class NotificationManager : MonoBehaviour
         switch (notif.notificationType)
         {
             case Notification.NotificationType.TUTORIAL:
-                obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Tutorial";
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Tutorial";
                 break;
             case Notification.NotificationType.NOTIFICATION:
-                obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Notification";
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Notification";
                 break;
             case Notification.NotificationType.QUEST:
-                obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Quest";
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Quest";
                 break;
             case Notification.NotificationType.CLUE:
-                obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Clue";
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Clue";
                 break;
             case Notification.NotificationType.MORE:
-                obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "More Notifications";
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "More Notifications";
                 break;
         }
         
-        obj.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = notif.notificationInfo;
+        obj.transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = notif.notificationInfo;
     }
     public int AvailableNotif()
     {
@@ -123,19 +123,29 @@ public class NotificationManager : MonoBehaviour
         return 0;       
     }
 
-    public IEnumerator NotificationCountdown()
+    public IEnumerator NotificationCountdown(GameObject notif)
     {      
         yield return new WaitForSeconds(5f);
-        HideNotification();
+        HideNotification(notif);
         Debug.Log("HIde notif");
     }
-    public void HideNotification()
+    public void HideNotification(GameObject notif)
     {
-        GameObject notif = activeNotifList[0];
-        notif.GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.GetComponent<Transform>().localPosition.x -342,
-            notif.GetComponent<Transform>().localPosition.y), 0.25f);
+        //GameObject notif = activeNotifList[0];
+        notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x -342,
+            notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
+
+        StartCoroutine(HideNotificationCountdown(notif));
+        
+    }
+
+    public IEnumerator HideNotificationCountdown(GameObject notif)
+    {
+        yield return new WaitForSeconds(0.25f);
+        activeNotifList.Remove(notif);
         inactiveNotifList.Add(notif);
-        activeNotifList.RemoveAt(0);
+        
         notif.SetActive(false);
+
     }
 }

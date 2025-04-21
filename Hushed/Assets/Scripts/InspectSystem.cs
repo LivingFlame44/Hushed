@@ -1,19 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InspectSystem : MonoBehaviour
 {
     public GameObject inspectSystem;
     public Transform objectToInspect;
 
+    public delegate void OnInspectStop();
+    public OnInspectStop onInspectStop;
+
     public float rotationSpeed = 50f;
 
     private Vector3 previousMousePos;
+
+    Vector2 mousescroll;
+    float size;
+    float currentSize;
+    private float velocity = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        size = 1;
+        currentSize = 1;
     }
 
     // Update is called once per frame
@@ -38,8 +50,23 @@ public class InspectSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
+            //objectToInspect.GetComponent<InspectableObjectEvents>().inspectableObjectEvent.Invoke();
             objectToInspect.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
         }
+
+        Zoom();
+    }
+
+    
+    public void Zoom()
+    {
+        
+        //mousescroll = Input.mouseScrollDelta;
+        size += Input.GetAxisRaw("Mouse ScrollWheel") * 0.5f;
+        size = Mathf.Clamp(size, 1, 1.35f);
+        currentSize = Mathf.SmoothDamp(currentSize, size, ref velocity, .1f);
+        objectToInspect.localScale = new Vector2(currentSize, currentSize);
+        
     }
 }
