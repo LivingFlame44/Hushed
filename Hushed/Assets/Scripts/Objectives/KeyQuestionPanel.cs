@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KeyQuestionPanel : MonoBehaviour
@@ -29,5 +30,7 @@ public class KeyQuestionPanel : MonoBehaviour
         answerSlot.SetActive(false);
         answerText.SetActive(true);
         answerText.GetComponent<TextMeshProUGUI>().text = "<u>" + keyQuestion.questionAnswer + "</u>";
+
+        keyQuestion.GetComponent<TextMeshProUGUI>().color = Color.gray;
     }
 }

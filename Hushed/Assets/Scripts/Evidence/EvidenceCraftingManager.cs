@@ -16,7 +16,7 @@ public class EvidenceCraftingManager : MonoBehaviour
     private string folderPath = "Recipe";
     public Recipe[] recipes;
 
-    public GameObject newEvidenceBtn;
+    public GameObject newEvidenceBtn, duplicateEvidenceErrorText;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +63,7 @@ public class EvidenceCraftingManager : MonoBehaviour
     public void CheckRecipe()
     {
         //loops through all recipes
+        duplicateEvidenceErrorText.SetActive(false);
         newEvidenceBtn.SetActive(false);
         foreach (var recipe in recipes)
         {
@@ -117,15 +118,23 @@ public class EvidenceCraftingManager : MonoBehaviour
 
     public void CollectCraftedEvidence(Evidence evidence)
     {
-        for (int i = 0; i < evidenceInSlotList.Length; i++)
+        if (EvidenceManager.instance.ownedEvidenceList.Contains(evidence))
         {
-            evidenceInSlotList[i] = 0;
+            duplicateEvidenceErrorText.SetActive(true);
         }
+        else
+        {
+            for (int i = 0; i < evidenceInSlotList.Length; i++)
+            {
+                evidenceInSlotList[i] = 0;
+            }
 
-        ReturnAllEvidence();
-        newEvidenceBtn.SetActive(false);
+            ReturnAllEvidence();
+            newEvidenceBtn.SetActive(false);
 
-        EvidenceManager.instance.UnlockNewEvidence(evidence.evidenceID);
+            EvidenceManager.instance.UnlockNewEvidence(evidence.evidenceID);
+        }
+        
     }
 
     public void ReturnAllEvidence()

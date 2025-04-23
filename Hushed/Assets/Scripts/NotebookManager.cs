@@ -34,13 +34,13 @@ public class NotebookManager : MonoBehaviour
 
     public void OpenNotebook()
     {
-        noteBook.DOAnchorPos(new Vector2(0, -42f), 0.25f);
+        noteBook.DOAnchorPos(new Vector2(0, 0), 0.25f);
         noteBookOpened = true;
     }
 
     public void CloseNotebook()
     {
-        noteBook.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1660, -42f), 0.25f);
+        noteBook.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1660, 0), 0.25f);
         noteBookOpened = false;
     }
 }

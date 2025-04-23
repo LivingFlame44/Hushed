@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider collision)
+    public void OnTriggerStay(Collider collision)
     {
         if(collision.CompareTag("Player"))
         {
@@ -46,6 +46,17 @@ public class Interactable : MonoBehaviour
         }    
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (interacted == false)
+            {
+                ShowText();
+                interactEnabled = true;
+            }
+        }
+    }
     private void OnTriggerExit(Collider collision)
     {
         

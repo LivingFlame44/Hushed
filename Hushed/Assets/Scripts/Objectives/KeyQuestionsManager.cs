@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyQuestionsManager : MonoBehaviour
 {
+    public GameObject keyQuestionsContainerPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class KeyQuestionsManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void InstantiateKeyQuestion()
+    {
+
     }
 }

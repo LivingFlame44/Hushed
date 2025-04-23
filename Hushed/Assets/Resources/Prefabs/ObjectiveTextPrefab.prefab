@@ -70,8 +70,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: \u2022 Open Your Computer \u2022 Open Your Computer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9e01230d7ecc9eb4c914eba78e5888ac, type: 2}
-  m_sharedMaterial: {fileID: 9184299988834129158, guid: 9e01230d7ecc9eb4c914eba78e5888ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a67bb2d23236084cbb50e90e3a15fc4, type: 2}
+  m_sharedMaterial: {fileID: 4306665254371094336, guid: 4a67bb2d23236084cbb50e90e3a15fc4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
