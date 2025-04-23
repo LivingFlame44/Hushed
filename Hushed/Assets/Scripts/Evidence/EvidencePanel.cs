@@ -96,7 +96,7 @@ public class EvidencePanel : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
                     //this.gameObject.transform.localPosition = new Vector2(50, -80);
                     this.gameObject.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
                     this.gameObject.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
-                    this.gameObject.GetComponent<RectTransform>().localPosition = new Vector2(0, -25);
+                    this.gameObject.GetComponent<RectTransform>().localPosition = new Vector2(0, -20);
 
                     removeBtn.SetActive(true);
                     inSlot = true;
