@@ -102,6 +102,9 @@ public class NotificationManager : MonoBehaviour
             case Notification.NotificationType.CLUE:
                 obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Clue";
                 break;
+            case Notification.NotificationType.HINT:
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hint";
+                break;
             case Notification.NotificationType.MORE:
                 obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "More Notifications";
                 break;
@@ -125,7 +128,7 @@ public class NotificationManager : MonoBehaviour
 
     public IEnumerator NotificationCountdown(GameObject notif)
     {      
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7.5f);
         HideNotification(notif);
         Debug.Log("HIde notif");
     }

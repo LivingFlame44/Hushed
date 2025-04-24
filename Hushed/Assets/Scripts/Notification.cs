@@ -18,6 +18,7 @@ public class Notification : ScriptableObject
         CLUE,
         QUEST,
         NOTIFICATION,
+        HINT,
         MORE
     }
     // Start is called before the first frame update

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
         HIDING,
         GRABBED,
         PREPARING,
-        STATIONARY
+        STATIONARY,
+        SITTING,
+        RESET
     }
 
     public PlayerState playerState;
@@ -42,19 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerState == PlayerState.GRABBED || playerState == PlayerState.STATIONARY || playerState == PlayerState.PREPARING)
-        {
-            
-        }
-        else
-        {
-            Movement();
-            //HandleAnimation();
-            Flip();
-        }
-        
-
-        switch(playerState)
+        switch (playerState)
         {
             case PlayerState.IDLE:
                 speed = 6f;
@@ -70,11 +61,32 @@ public class PlayerMovement : MonoBehaviour
             case PlayerState.STATIONARY:
                 break;
             case PlayerState.PREPARING:
+                animator.SetBool("isInteracting", true);
                 break;
             default:
                 speed = 6f;
                 break;
         }
+
+        if (playerState == PlayerState.GRABBED || playerState == PlayerState.STATIONARY || playerState == PlayerState.PREPARING)
+        {
+            
+        }
+        else
+        {
+            ResetAnimation();
+            Movement();
+            //HandleAnimation();
+            Flip();
+        }
+        
+
+        
+    }
+
+    public void ResetAnimation()
+    {
+        animator.SetBool("isInteracting", false);
     }
 
     void Movement()

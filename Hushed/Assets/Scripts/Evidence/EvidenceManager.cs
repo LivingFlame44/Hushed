@@ -48,12 +48,27 @@ public class EvidenceManager : MonoBehaviour
 
     public void NextPage(GameObject panel)
     {
-        panel.transform.localPosition = new Vector2(panel.transform.localPosition.x - 130, panel.transform.localPosition.y);
+        float posLimit = Mathf.Clamp((panel.transform.GetComponent<RectTransform>().sizeDelta.x - 412f), 0 , panel.transform.GetComponent<RectTransform>().sizeDelta.x);
+        posLimit = -posLimit;
+        Debug.Log(posLimit);
+        panel.transform.localPosition = new Vector2(panel.transform.localPosition.x - 104f, panel.transform.localPosition.y);
+        if (panel.transform.localPosition.x > -104)
+        {
+            panel.transform.localPosition = new Vector2(-104f, panel.transform.localPosition.y);
+        }
+        if (panel.transform.localPosition.x < posLimit - 208)
+        {
+            panel.transform.localPosition = new Vector2(posLimit - 208, panel.transform.localPosition.y);
+        }
+        //panel.transform.localPosition = new Vector2(-Mathf.Clamp(Mathf.Abs(panel.transform.localPosition.x - 104f), 0, posLimit), panel.transform.localPosition.y);
+        Debug.Log(panel.transform.localPosition);
     }
 
     public void PreviousPage(GameObject panel)
     {
-        panel.transform.localPosition = new Vector2(panel.transform.localPosition.x + 130, panel.transform.localPosition.y);
+        float posLimit = Mathf.Clamp(-Mathf.Abs(panel.transform.GetComponent<RectTransform>().sizeDelta.x - 412), panel.transform.GetComponent<RectTransform>().sizeDelta.x - 412, 0);
+        panel.transform.localPosition = new Vector2(panel.transform.localPosition.x + 104, panel.transform.localPosition.y);
+        Debug.Log(panel.transform.localPosition);
     }
 
     public void UnlockNewEvidence(int idNum)

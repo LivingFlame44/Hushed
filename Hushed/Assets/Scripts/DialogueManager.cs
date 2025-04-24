@@ -33,6 +33,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject textBoxPanel;
     public Scrollbar dialogueScrollbar;
 
+    public TMP_FontAsset nameFont;
+    public TMP_FontAsset messageFont;
+
     public List<GameObject> activeLeftTextList, inactiveLeftTextList, activeRightTextList, 
         inactiveRightTextList, activeMiddleTextList, inactiveMiddleTextList;
 
@@ -257,6 +260,7 @@ public class DialogueManager : MonoBehaviour
                         {
                             textBox = PoolLeftTextBox();
                             textBox.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.character.name;
+                            textBox.GetComponentInChildren<TextMeshProUGUI>().font = nameFont;
                         }
                         
                         InstantiateText(TextType.OtherDialogue, currentLine.line);
@@ -350,6 +354,7 @@ public class DialogueManager : MonoBehaviour
         while (activeList.Count > 0)
         {
             GameObject obj = activeList[0];
+            obj.GetComponentInChildren<TextMeshProUGUI>().font = messageFont;
             inactiveList.Add(obj);
             activeList.RemoveAt(0);
             obj.SetActive(false);
