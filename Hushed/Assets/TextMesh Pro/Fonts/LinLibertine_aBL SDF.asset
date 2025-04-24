@@ -73,9 +73,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: LinLibertine_aBL SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1884142380
   material: {fileID: -6065120826892845793}
-  materialHashCode: 0
+  materialHashCode: 1994665100
   m_Version: 1.1.0
   m_SourceFontFileGUID: bb03ce800851dd3459754ef9a3788df9
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: bb03ce800851dd3459754ef9a3788df9, type: 3}
