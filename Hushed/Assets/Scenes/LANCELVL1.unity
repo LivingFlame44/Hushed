@@ -31855,14 +31855,14 @@ RectTransform:
   m_GameObject: {fileID: 1222354829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90277, y: 0.90277, z: 0.90277}
+  m_LocalScale: {x: 0.639441, y: 0.639441, z: 0.639441}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1352677104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -73, y: -61}
+  m_AnchoredPosition: {x: -55, y: -49.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1222354831
@@ -50065,8 +50065,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Miguel's Photo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4d3a5267bd6235449a390f34b09b92c7, type: 2}
-  m_sharedMaterial: {fileID: -5803788174948837492, guid: 4d3a5267bd6235449a390f34b09b92c7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bad3789ffbd2164fb61cf1e1bb47c79, type: 2}
+  m_sharedMaterial: {fileID: 1105314988002004920, guid: 1bad3789ffbd2164fb61cf1e1bb47c79, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
