@@ -4,7 +4,11 @@ using UnityEngine;
 using DG.Tweening;
 public class NotebookManager : MonoBehaviour
 {
+    public static NotebookManager instance;
     public NotificationManager notificationManager;
+    public NewObjectiveTypes newObjectiveTypes;
+    public InventoryManager inventoryManager;
+
 
     public bool noteBookOpened;
     public RectTransform noteBook;
@@ -17,7 +21,10 @@ public class NotebookManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame

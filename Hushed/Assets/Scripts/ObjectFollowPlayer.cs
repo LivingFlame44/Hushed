@@ -30,10 +30,10 @@ public class ObjectFollowPlayer : MonoBehaviour
         switch (player.isFacingRight)
         {
             case false: 
-                targetPosition = new Vector3(leader.position.x - 0.82f, leader.position.y);
+                targetPosition = new Vector3(leader.position.x - 0.82f, leader.position.y, leader.position.z + 1);
                 break;
             case true:
-                targetPosition = new Vector3(leader.position.x + 0.41f, leader.position.y);
+                targetPosition = new Vector3(leader.position.x + 0.41f, leader.position.y, leader.position.z + 1);
                 break;
         }
         transform.position = targetPosition;

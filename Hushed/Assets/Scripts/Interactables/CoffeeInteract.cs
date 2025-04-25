@@ -44,7 +44,7 @@ public class CoffeeInteract : Interactable
         yield return new WaitForSeconds(3f);
         waitingText.SetActive(false);
         player.hasCoffee = true;
-        player.playerState = PlayerMovement.PlayerState.IDLE;
+        player.playerState = PlayerMovement.PlayerState.WALKHOLDING;
         interactEvent.Invoke();
     }
 

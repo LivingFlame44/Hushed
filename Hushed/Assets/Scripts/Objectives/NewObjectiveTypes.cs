@@ -10,7 +10,7 @@ using static InspectSystem;
 public class NewObjectiveTypes : MonoBehaviour
 {
     public GameObject inspectSystem;
-    public UnityEvent eventOnInspectStop;
+    public UnityEvent storyEvents;
     // Start is called before the first frame update
     void Start()
     {

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     {
         IDLE,
         WALKING,
+        WALKHOLDING,
         HIDING,
         GRABBED,
         PREPARING,
@@ -51,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
                 speed = 6f;
                 break;
             case PlayerState.WALKING:
+                speed = 6f;
+                break;
+            case PlayerState.WALKHOLDING:
+                speed = 6f;
                 break;
             case PlayerState.HIDING:
                 speed = 2;
@@ -62,6 +67,10 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case PlayerState.PREPARING:
                 animator.SetBool("isInteracting", true);
+                break;
+            case PlayerState.SITTING:
+                speed = 0f;
+                animator.SetBool("isSitting", true);
                 break;
             default:
                 speed = 6f;
@@ -98,9 +107,22 @@ public class PlayerMovement : MonoBehaviour
         //}
         isWalking = horizontal != 0 ? true : false;
         animator.SetFloat("Speed", horizontal != 0 ? 1 : 0);
-        animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);
 
+        switch (playerState)
+        {
+            case PlayerState.WALKHOLDING:
+                animator.SetFloat("Horizontal", horizontal != 0 ? 2 : 0);
+                break;
+            default:
+                animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);
+                break;
+        }
+                
+    }
 
+    public void BackToIdle()
+    {
+        playerState = PlayerState.IDLE;
     }
 
     public void GetItem(string item)
