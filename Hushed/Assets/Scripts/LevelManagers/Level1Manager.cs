@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Events;
 public class Level1Manager : MonoBehaviour
 {
     public Scrollbar firstQuestScrollbar;
     public GameObject teresitaSprite;
     public QuestNumber questNumber;
+
+    public List<UnityEvent> level1Events = new List<UnityEvent>();
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +43,29 @@ public class Level1Manager : MonoBehaviour
     {
         if (firstQuestScrollbar.value <= 0)
         {
-            ObjectiveManager.instance.CompleteObjective(0);
-            //Debug.Log("Quest 1 complete");
-
-            teresitaSprite.SetActive(true);
-            ObjectiveManager.instance.CompleteObjective(0);
-
-            questNumber = QuestNumber.ONE;
+            if(questNumber == QuestNumber.ZERO)
+            {
+                //Debug.Log("Quest 1 complete");
+                ObjectiveManager.instance.CompleteObjective(0);
+                level1Events[0].Invoke();
+                questNumber = QuestNumber.ONE;
+            }
+            
         }
+    }
+
+    public void HasWallet()
+    {
+        if (InventoryManager.instance.CheckInventory(1))
+        {
+            NotificationManager.instance.ShowNotification(22);
+            NotificationManager.instance.ShowNotification(23);
+        }
+        else
+        {
+            NotificationManager.instance.ShowNotification(24);
+        }
+
+        NotificationManager.instance.ShowNotification(25);
     }
 }

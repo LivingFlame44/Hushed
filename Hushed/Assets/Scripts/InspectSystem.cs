@@ -2,18 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class InspectSystem : MonoBehaviour
 {
+    public static InspectSystem instance;
+
     public GameObject inspectSystem;
     public Transform objectToInspect;
+
+    public List<UnityEvent> inspectEndEvents = new List<UnityEvent>();
+
+    public List<UnityEvent> inspectClickEvents = new List<UnityEvent>();
 
     public delegate void OnInspectStop();
     public OnInspectStop onInspectStop;
 
-    public float rotationSpeed = 50f;
+    public float rotationSpeed = 25f;
 
     private Vector3 previousMousePos;
 
@@ -24,6 +32,11 @@ public class InspectSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
+
         size = 1;
         currentSize = 1;
     }
@@ -51,6 +64,7 @@ public class InspectSystem : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             //objectToInspect.GetComponent<InspectableObjectEvents>().inspectableObjectEvent.Invoke();
+            inspectEndEvents[objectToInspect.GetComponent<InspectableObjectEvents>().eventIndex].Invoke();
             objectToInspect.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
         }

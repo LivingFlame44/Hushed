@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 public class InspectItemPress : MonoBehaviour, IPointerDownHandler
 {
     // Start is called before the first frame update
+    public bool isClicked;
+
+    public int eventOnClickNum;
     void Start()
     {
         
@@ -20,14 +23,26 @@ public class InspectItemPress : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        var hits = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventData, hits);
-
-        var hit = hits.FirstOrDefault(t => (t.gameObject.CompareTag("ClickableItem")));
-
-        if (hit.isValid)
+        if(isClicked == false)
         {
-
+            InspectSystem.instance.inspectClickEvents[eventOnClickNum].Invoke();
+            isClicked = true;
         }
+        //var hits = new List<RaycastResult>();
+        //EventSystem.current.RaycastAll(eventData, hits);
+
+        //var hit = hits.FirstOrDefault(t => (t.gameObject.CompareTag("ClickableItem")));
+
+        //if (hit.isValid)
+        //{
+        //    if (hit.gameObject.GetComponent<InspectItemPress>().isClicked == false)
+        //    {
+                
+
+        //        hit.gameObject.GetComponent<InspectItemPress>().isClicked = true;
+        //    }
+
+        //}
     }
+
 }

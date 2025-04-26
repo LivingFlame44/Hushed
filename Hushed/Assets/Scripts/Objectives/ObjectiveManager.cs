@@ -122,8 +122,10 @@ public class ObjectiveManager : MonoBehaviour
                 if (currentObjectivesTextList[i].GetComponent<ObjectiveTextID>().objectiveID == id)
                 {
                     //update pool and removes quest in UI    
-                    currentObjectivesTextList[i].transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(currentObjectivesTextList[i].transform.GetComponent<RectTransform>().sizeDelta.x, 2);
                     currentObjectivesTextList[i].transform.GetChild(0).gameObject.SetActive(true);
+                    //currentObjectivesTextList[i].transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(currentObjectivesTextList[i].transform.GetComponent<RectTransform>().sizeDelta.x, 2);
+                    //Debug.Log(currentObjectivesTextList[i].transform.GetComponent<RectTransform>().sizeDelta.x);
+                    //Debug.Log(currentObjectivesTextList[i].transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta.x);
                     currentObjectivesTextList[i].GetComponent<TextMeshProUGUI>().color = Color.grey;
                     //currentObjectivesTextList[i].SetActive(false);
                     //inactiveObjectivesTextList.Add(currentObjectivesTextList[i]);

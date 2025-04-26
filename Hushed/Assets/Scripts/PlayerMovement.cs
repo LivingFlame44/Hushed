@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public bool hasCoffee = false;
 
     public List<string> playerItems;
+
+    public Vector3 movePos;
     //public Transform groundCheck;
     //public LayerMask groundLayer;
 
@@ -49,13 +51,16 @@ public class PlayerMovement : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.IDLE:
+                ResetAnimator();
                 speed = 6f;
                 break;
             case PlayerState.WALKING:
+                ResetAnimator();
                 speed = 6f;
                 break;
             case PlayerState.WALKHOLDING:
                 speed = 6f;
+                ResetAnimator();
                 break;
             case PlayerState.HIDING:
                 speed = 2;
@@ -64,8 +69,10 @@ public class PlayerMovement : MonoBehaviour
                 speed = 0;
                 break;
             case PlayerState.STATIONARY:
+                speed = 0;
                 break;
             case PlayerState.PREPARING:
+                speed = 0;
                 animator.SetBool("isInteracting", true);
                 break;
             case PlayerState.SITTING:
@@ -77,25 +84,43 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        if (playerState == PlayerState.GRABBED || playerState == PlayerState.STATIONARY || playerState == PlayerState.PREPARING)
+        if (speed == 0)
         {
             
         }
         else
         {
-            ResetAnimation();
+            
             Movement();
             //HandleAnimation();
             Flip();
+            //ResetAnimation();
         }
         
 
         
     }
 
+    public void MoveMika()
+    {
+        this.transform.parent.gameObject.transform.localPosition = movePos;
+    }
     public void ResetAnimation()
     {
+        playerState = PlayerState.IDLE;
         animator.SetBool("isInteracting", false);
+        animator.SetBool("isSitting", false);
+    }
+
+    public void ResetAnimator()
+    {
+        animator.SetBool("isInteracting", false);
+        animator.SetBool("isSitting", false);
+    }
+
+    public void MikaHoldItem()
+    {
+        playerState = PlayerState.WALKHOLDING;
     }
 
     void Movement()

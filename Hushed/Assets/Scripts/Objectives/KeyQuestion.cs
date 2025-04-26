@@ -9,6 +9,7 @@ public class KeyQuestion : ScriptableObject
     public string questionName;
     public int questionAnswerID;
     public string questionAnswer;
+    public int eventOnAnswerNum;
     // Start is called before the first frame update
     void Start()
     {

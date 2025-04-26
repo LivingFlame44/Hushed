@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 8a26f14ece044714ba7b9a59d3a1ab31
+  - enabled: 1
+    path: Assets/Scenes/KalipunanStation.unity
+    guid: 449cc7d7e44005d4fa10cdc65f2eba52
   m_configObjects: {}

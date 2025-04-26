@@ -26,6 +26,8 @@ public class DialogueLine
 public class Dialogue1
 {
     public string dialogueName;
+    public string dialogueSpeaker;
+    public Sprite dialogueSpeakerImage;
     public UnityEvent dialogueEndEvent;
     public List<DialogueLine> dialogueLines = new List<DialogueLine>();
 }

@@ -83,8 +83,13 @@ public class EvidencePanel : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
             var hits = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventData, hits);
 
-            var hit = hits.FirstOrDefault(t => (t.gameObject.CompareTag("EvidenceSlot") && t.gameObject.GetComponent<EvidenceSlot>().isTaken == false) 
-            || t.gameObject.CompareTag("KeyQuestionSlot"));
+            var hit = hits.FirstOrDefault(t => t.gameObject.CompareTag("KeyQuestionSlot") || 
+            (t.gameObject.CompareTag("EvidenceSlot") && t.gameObject.GetComponent<EvidenceSlot>().isTaken == false));
+
+            foreach (var result in hits)
+            {
+                Debug.Log($"Hit: {result.gameObject.name} (Tag: {result.gameObject.tag})");
+            }
 
             if (hit.isValid)
             {
@@ -107,20 +112,56 @@ public class EvidencePanel : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
 
                     return;
                 }
+                //else
+                //{
+                //    if(hit.gameObject.transform.parent.gameObject.GetComponent<KeyQuestionPanel>().keyQuestion.questionAnswerID == evidence.evidenceID 
+                //        && evidence.evidenceType == Evidence.EvidenceType.EvidenceAnswer)
+                //    {
+                //        Debug.Log("hitttting");
+                //        hit.gameObject.transform.parent.gameObject.GetComponent<KeyQuestionPanel>().AnswerKeyQuestion();
+                //        Debug.Log("hited");
+                //    }
+                //}
+
                 else
                 {
-                    if(hit.gameObject.GetComponent<KeyQuestionPanel>().keyQuestion.questionAnswerID == evidence.evidenceID 
-                        && evidence.evidenceType == Evidence.EvidenceType.EvidenceAnswer)
+                    // Check if parent exists and has KeyQuestionPanel
+                    if (hit.gameObject.transform.parent != null)
                     {
-                        hit.gameObject.GetComponent<KeyQuestionPanel>().AnswerKeyQuestion();
+                        KeyQuestionPanel keyQuestionPanel = hit.gameObject.transform.parent.GetComponent<KeyQuestionPanel>();
+                        if (keyQuestionPanel != null)
+                        {
+                            if (keyQuestionPanel.keyQuestion.questionAnswerID == evidence.evidenceID
+                                && evidence.evidenceType == Evidence.EvidenceType.EvidenceAnswer)
+                            {
+                                Debug.Log("Key question answered successfully!");
+                                keyQuestionPanel.AnswerKeyQuestion();
+                            }
+                            else
+                            {
+                                Debug.LogWarning("Evidence ID mismatch or wrong type.");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogError("Parent object missing KeyQuestionPanel: " + hit.gameObject.transform.parent.name);
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("No parent found for: " + hit.gameObject.name);
                     }
                 }
-                
+
+
+
             }
 
             transform.SetParent(prevParent.transform);
             transform.SetSiblingIndex(siblingIndex);
             transform.position = startPos;
+
+            Debug.Log("Go Back Original");
         }
         
     }

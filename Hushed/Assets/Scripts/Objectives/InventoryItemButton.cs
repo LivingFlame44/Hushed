@@ -20,7 +20,7 @@ public class InventoryItemButton : MonoBehaviour
 
     public void ShowItemInfo()
     {
-        NotebookManager.instance.inventoryManager.ShowItemInfo(item);
+        InventoryManager.instance.ShowItemInfo(item);
     }
 
 

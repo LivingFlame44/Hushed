@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Objective2
   m_EditorClassIdentifier: 
   objectiveID: 2
-  objectiveInfo: -Find the last place Miggy Pajayon might've gone.
+  objectiveInfo: -Inspect and See the Photo.
   objectiveComplete: 0
   prerequisiteObjectiveIDs: 
   onObjectiveStartEvent:

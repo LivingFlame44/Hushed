@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Objective3
   m_EditorClassIdentifier: 
   objectiveID: 3
-  objectiveInfo: -Get the key from the guard
+  objectiveInfo: -Give the coffee to your Client.
   objectiveComplete: 0
-  prerequisiteObjectiveIDs: 0100000002000000
+  prerequisiteObjectiveIDs: 
   onObjectiveStartEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -32,7 +32,7 @@ public class NewObjectiveTypes : MonoBehaviour
     {
         inspectSystem.SetActive(true);
         GameObject obj = Instantiate(go, inspectSystem.transform);
-        inspectSystem.GetComponent<InspectSystem>().objectToInspect = obj.transform;
+        inspectSystem.GetComponent<InspectSystem>().objectToInspect = obj.GetComponent<Transform>();
     }
 
     public void AddEventOnInspectStop(OnInspectStop eventOnStop)

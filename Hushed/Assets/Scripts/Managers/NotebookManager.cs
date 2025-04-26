@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
 public class NotebookManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class NotebookManager : MonoBehaviour
     public NewObjectiveTypes newObjectiveTypes;
     public InventoryManager inventoryManager;
 
+    public List<UnityEvent> notebookCloseEvents = new List<UnityEvent>();
+    public int notebookEventNum;
 
     public bool noteBookOpened;
     public RectTransform noteBook;
@@ -53,9 +56,19 @@ public class NotebookManager : MonoBehaviour
             notificationManager.ShowNotification(19);
             notebookInteracted = true;
         }
-        
+        NotebookInvoke();
     }
 
+    public void AssignNotebookEvent(int index)
+    {
+        notebookEventNum = index;
+    }
+
+    public void NotebookInvoke()
+    {
+        notebookCloseEvents[notebookEventNum].Invoke();
+        notebookEventNum = 0;
+    }
     public void CloseNotebook()
     {
         noteBook.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1660, 0), 0.25f);

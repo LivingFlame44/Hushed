@@ -6,6 +6,8 @@ public class Teresita : MonoBehaviour
 {
     public bool isSitting, isCrying;
     public Animator animator;
+    
+    public Vector3 standingPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +17,33 @@ public class Teresita : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isSitting)
+        
+        
+    }
+
+    public void TeresitaCry()
+    {
+        isCrying = !isCrying;
+        animator.SetBool("isCrying", isCrying);
+    }
+
+    public void TeresitaSit()
+    {
+        switch (isSitting)
         {
-            animator.SetBool("isSitting", true);
-        }
-        else
-        {
-            animator.SetBool("isSitting", false);
+            case true:
+                transform.localPosition = standingPos;
+                break;
+
+            case false:
+                
+                transform.localPosition = new Vector3(-2.77f, -1.03f, -1.09f);
+
+                break;
+
         }
 
-        if (isCrying)
-        {
-            animator.SetBool("isCrying", true);
-        }
-        else
-        {
-            animator.SetBool("isCrying", false);
-        }
+        isSitting = !isSitting;
+        animator.SetBool("isSitting", isSitting);
     }
 }

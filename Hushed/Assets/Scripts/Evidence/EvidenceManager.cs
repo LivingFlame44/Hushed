@@ -88,6 +88,7 @@ public class EvidenceManager : MonoBehaviour
                 break;
         }
         evidencePanel.transform.SetSiblingIndex(0);
+        evidencePanel.GetComponent<RectTransform>().sizeDelta = new Vector2(100, 128);
 
         evidencePanel.GetComponent<EvidencePanel>().evidence = evidence;
         evidencePanel.GetComponentInChildren<TextMeshProUGUI>().text = evidence.evidenceName;

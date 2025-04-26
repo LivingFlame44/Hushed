@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf7772534fc06146af9ac15fe209df4, type: 3}
   m_Name: 003 Marine Pic 1
   m_EditorClassIdentifier: 
-  evidenceName: Marine Pic
+  evidenceName: New Crafted Evidence
   evidenceID: 3
   evidenceType: 0
   iconType: 2
+  evidenceImage: {fileID: 0}
+  evidenceInfo: 

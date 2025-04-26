@@ -144,6 +144,20 @@ public class DialogueManager : MonoBehaviour
             }
 
             dialogueEndEvent = dialogueEvent;
+
+            if (dialogue.dialogueSpeakerImage != null)
+            {
+                charIcon.gameObject.SetActive(true);
+                charName.gameObject.SetActive(true);
+                charIcon.sprite = dialogue.dialogueSpeakerImage;
+                charName.text = dialogue.dialogueSpeaker;
+            }
+            else
+            {
+                charName.gameObject.SetActive(false);
+                charIcon.gameObject.SetActive(false);
+            }
+
             DisplayNextDialogueLine();
         }
         else
@@ -171,15 +185,7 @@ public class DialogueManager : MonoBehaviour
             currentLine = lines.Dequeue();
         }
 
-        if(currentLine.character.icon != null)
-        {
-            charIcon.gameObject.SetActive(true);
-            charIcon.sprite = currentLine.character.icon;
-        }
-        else
-        {
-            charIcon.gameObject.SetActive(false);
-        }
+        
 
         //OLD   charName.text = currentLine.character.name;
         InstantiateText(TextType.Name, currentLine.character.name);

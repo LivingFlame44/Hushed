@@ -6,6 +6,7 @@ using TMPro;
 
 public class NotificationManager : MonoBehaviour
 {
+    public static NotificationManager instance;
     public GameObject spawnRef;
     //public Vector3 spawnLocation;
     public GameObject notificationPanel;
@@ -24,11 +25,16 @@ public class NotificationManager : MonoBehaviour
     private void Awake()
     {
         notificationValuesList = Resources.LoadAll<Notification>(folderPath);
+        
 
     }
     void Start()
     {
         //spawnLocation = new Vector3(spawnRef.transform.localPosition.x, spawnRef.transform.localPosition.y, 0);
+        if(instance  == null)
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
@@ -39,7 +45,7 @@ public class NotificationManager : MonoBehaviour
 
     public void ShowNotification(int id)
     {
-        Debug.Log("SHow notif");
+        //Debug.Log("SHow notif");
         //MoveNotificationsDown();
         if(inactiveNotifList.Count == 0)
         {

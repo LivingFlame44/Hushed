@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager instance;
+
     public Item[] items;
     private string folderPath = "Items"; // Folder name inside the Assets/Resources folder
 
@@ -33,7 +35,10 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
@@ -59,7 +64,7 @@ public class InventoryManager : MonoBehaviour
         Item item = items[itemID];
         inventory.Add(item);
 
-        itemContainerPanel.SetActive(false);
+        itemContainerPanel.SetActive(true);
 
         GameObject itemBtn = InstantiateItemButton();
 
@@ -104,5 +109,18 @@ public class InventoryManager : MonoBehaviour
 
         return itemBtn;
         
+    }
+
+    public bool CheckInventory(int id)
+    {
+        foreach(Item item in inventory)
+        {
+            if(item.itemID == id)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

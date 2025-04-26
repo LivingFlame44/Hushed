@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InspectableObjectEvents : MonoBehaviour
 {
-    public UnityEvent inspectableObjectEvent;
+    public int eventIndex;
     // Start is called before the first frame update
     void Start()
     {

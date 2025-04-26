@@ -23,6 +23,10 @@ public class CutSceneManager : MonoBehaviour
     {
         VideoEvent(31, eventPanels[0], 0);
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeSceneManager.instance.ChangeScene(nextSceneName);
+        }
     }
 
     public void VideoEvent(int time, GameObject go, int eventIndex)

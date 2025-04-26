@@ -8,6 +8,8 @@ public class KeyQuestionPanel : MonoBehaviour
 {
     public KeyQuestion keyQuestion;
     public GameObject answerSlot, answerText, questionText;
+    public bool isAnswered;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +29,22 @@ public class KeyQuestionPanel : MonoBehaviour
 
     public void AnswerKeyQuestion()
     {
-        answerSlot.SetActive(false);
-        answerText.SetActive(true);
-        answerText.GetComponent<TextMeshProUGUI>().text = "<u>" + keyQuestion.questionAnswer + "</u>";
+        if(!isAnswered)
+        {
+            answerSlot.SetActive(false);
+            answerText.SetActive(true);
+            answerText.GetComponent<TextMeshProUGUI>().text = "<u>" + keyQuestion.questionAnswer + "</u>";
 
-        keyQuestion.GetComponent<TextMeshProUGUI>().color = Color.gray;
+            questionText.GetComponent<TextMeshProUGUI>().color = Color.gray;
+            answerText.GetComponent<TextMeshProUGUI>().color = Color.gray;
+
+            isAnswered = true;
+
+            KeyQuestionsManager.instance.eventOnAnswer[keyQuestion.eventOnAnswerNum].Invoke();
+            Debug.Log("go event");
+        }
+        
+
+
     }
 }

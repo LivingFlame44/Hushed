@@ -37,6 +37,12 @@ public class UIManager : MonoBehaviour
                 break;
         }
     }
+
+    private void Start()
+    {
+        AudioManager.Instance.PlaySFX("Flickering Sounds 2");
+        AudioManager.Instance.PlaySFX("Microwave Sound Effect");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -44,11 +50,13 @@ public class UIManager : MonoBehaviour
     }
     public void Play(string loadLevel)
     {
+        AudioManager.Instance.sfxSource.Stop();
         AsyncManager.instance.LoadLevelBtn(loadLevel);
     }
 
     public void ChangeScene(string sceneName)
     {
+        AudioManager.Instance.sfxSource.Stop();
         AsyncManager.instance.LoadScene(sceneName);
     }
 
