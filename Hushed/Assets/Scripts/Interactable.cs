@@ -80,9 +80,9 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log($"Before: {interactText.GetComponent<TextMeshPro>().text}");
-                    interactText.GetComponent<TextMeshPro>().text = interactMessage;
-                    Debug.Log($"After: {interactText.GetComponent<TextMeshPro>().text}");
+                    Debug.Log($"Before: {interactText.GetComponentInChildren<TextMeshPro>().text}");
+                    interactText.GetComponentInChildren<TextMeshPro>().text = interactMessage;
+                    Debug.Log($"After: {interactText.GetComponentInChildren<TextMeshPro>().text}");
                 }
 
             }
@@ -96,7 +96,7 @@ public class Interactable : MonoBehaviour
         yield return null;
         if (interactText != null && interactMessage != null)
         {
-            interactText.GetComponent<TextMeshPro>().text = interactMessage;
+            interactText.GetComponentInChildren<TextMeshPro>().text = interactMessage;
         }
     }
 

@@ -1,3 +1,4 @@
+using Cinemachine.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ public class InspectSystem : MonoBehaviour
 
     public float rotationSpeed = 25f;
 
-    private Vector3 previousMousePos;
+    public Vector3 previousMousePos;
 
     Vector2 mousescroll;
     float size;
@@ -65,6 +66,10 @@ public class InspectSystem : MonoBehaviour
         {
             //objectToInspect.GetComponent<InspectableObjectEvents>().inspectableObjectEvent.Invoke();
             inspectEndEvents[objectToInspect.GetComponent<InspectableObjectEvents>().eventIndex].Invoke();
+
+            previousMousePos = Vector3.zero;
+            objectToInspect.transform.rotation = Quaternion.Euler(0, 0, 0);
+
             objectToInspect.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
         }
@@ -72,7 +77,11 @@ public class InspectSystem : MonoBehaviour
         Zoom();
     }
 
-    
+    private void OnDisable()
+    {
+        
+    }
+
     public void Zoom()
     {
         

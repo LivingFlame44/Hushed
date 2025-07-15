@@ -31,22 +31,22 @@ public class CameraFade : MonoBehaviour
 
     private void Update()
     {
-        if (direction == 0 && Input.GetKeyDown(key))
-        {
-            if (alpha >= 1f) // Fully faded out
-            {
-                alpha = 1f;
-                time = 0f;
-                direction = 1;
-            }
-            else // Fully faded in
-            {
-                alpha = 0f;
-                time = 1f;
-                direction = -1;
-            }
+        //if (direction == 0 && Input.GetKeyDown(key))
+        //{
+        //    if (alpha >= 1f) // Fully faded out
+        //    {
+        //        alpha = 1f;
+        //        time = 0f;
+        //        direction = 1;
+        //    }
+        //    else // Fully faded in
+        //    {
+        //        alpha = 0f;
+        //        time = 1f;
+        //        direction = -1;
+        //    }
 
-        }
+        //}
     }
     public void OnGUI()
     {

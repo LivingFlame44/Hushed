@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 public class Level1Manager : MonoBehaviour
 {
     public Scrollbar firstQuestScrollbar;
@@ -14,6 +16,17 @@ public class Level1Manager : MonoBehaviour
     void Start()
     {
         questNumber = QuestNumber.ZERO;
+    }
+    static bool isLoaded = false;
+
+    void Awake()
+    {
+        if (!isLoaded)
+        {
+            DontDestroyOnLoad(gameObject);
+            SceneManager.LoadScene("Level 1");
+            isLoaded = true;
+        }
     }
     public enum QuestNumber
     {

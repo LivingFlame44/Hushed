@@ -13,7 +13,9 @@ public class UIManager : MonoBehaviour
     public GameObject menuPanel;
     public GameObject levelSelectPanel;
 
+    public GameObject[] turnOffOnPlay;
 
+    public GameObject postProcess;
     public enum MenuPanels
     {
         MAINMENU,
@@ -56,7 +58,13 @@ public class UIManager : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        //foreach(GameObject go in turnOffOnPlay)
+        //{
+        //    go.SetActive(false);
+        //}
         AudioManager.Instance.sfxSource.Stop();
+        //postProcess.SetActive(false);
+        //postProcess.GetComponent<Light>().enabled = false; 
         AsyncManager.instance.LoadScene(sceneName);
     }
 

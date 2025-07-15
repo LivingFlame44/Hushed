@@ -12,7 +12,7 @@ public class OpenPanel : Interactable
     public override void ShowText()
     {
         base.ShowText();
-        base.interactText.GetComponent<TextMeshPro>().text = $"[F] {textDisplay}";
+        base.interactText.GetComponentInChildren<TextMeshPro>().text = $"[F] {textDisplay}";
     }
 
     public override void Interact()

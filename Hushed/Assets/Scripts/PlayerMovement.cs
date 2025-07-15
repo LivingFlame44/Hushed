@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case PlayerState.WALKHOLDING:
                 speed = 6f;
-                ResetAnimator();
+                //ResetAnimator();
                 break;
             case PlayerState.HIDING:
                 speed = 2;
@@ -136,9 +136,11 @@ public class PlayerMovement : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.WALKHOLDING:
+                ResetAnimator();
                 animator.SetFloat("Horizontal", horizontal != 0 ? 2 : 0);
                 break;
             default:
+                ResetAnimator();
                 animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);
                 break;
         }
@@ -171,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector2 localScale = transform.localScale;
+            Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
         }

@@ -16,4 +16,10 @@ public class InspectableObjectEvents : MonoBehaviour
     {
         
     }
+
+    private void OnEnable()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        Debug.Log("Roateted");
+    }
 }

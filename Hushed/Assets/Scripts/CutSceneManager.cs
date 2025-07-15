@@ -21,7 +21,7 @@ public class CutSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VideoEvent(31, eventPanels[0], 0);
+        VideoEvent(52, eventPanels[0], 0);
 
         if(Input.GetKeyDown(KeyCode.Space))
         {

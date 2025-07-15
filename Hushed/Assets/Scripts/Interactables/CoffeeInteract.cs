@@ -37,7 +37,7 @@ public class CoffeeInteract : Interactable
         waitingText.SetActive(true);
         if(interactWaitingText != null )
         {
-            waitingText.GetComponent<TextMeshPro>().text = interactWaitingText;
+            waitingText.GetComponentInChildren<TextMeshPro>().text = interactWaitingText;
         }
         
         //play animation

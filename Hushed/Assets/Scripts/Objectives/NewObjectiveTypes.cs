@@ -32,7 +32,13 @@ public class NewObjectiveTypes : MonoBehaviour
     {
         inspectSystem.SetActive(true);
         GameObject obj = Instantiate(go, inspectSystem.transform);
+
+        obj.transform.localPosition = Vector3.zero;
+        obj.transform.rotation = Quaternion.identity; 
+
         inspectSystem.GetComponent<InspectSystem>().objectToInspect = obj.GetComponent<Transform>();
+
+        inspectSystem.GetComponent<InspectSystem>().objectToInspect.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     public void AddEventOnInspectStop(OnInspectStop eventOnStop)

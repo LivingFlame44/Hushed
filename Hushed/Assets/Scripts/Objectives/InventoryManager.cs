@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
     {
         itemInfoPanel.SetActive(true);
         itemInfoImage.sprite = item.itemImage;
-        itemInfoName.text = item.name;
+        itemInfoName.text = item.itemName;
         itemInfoDesc.text = item.itemInfo;
 
         itemInfoInspectBtn.onClick.RemoveAllListeners();
