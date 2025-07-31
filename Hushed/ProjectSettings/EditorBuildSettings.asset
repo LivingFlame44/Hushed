@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 06a075c745a4abb4bab04fc2436a6d43
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1 Test.unity
     guid: 71a689723d44c7e4682c019112550263
   - enabled: 1
@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: eca82d04683ce964faf68320644890ba
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
-    guid: 8a26f14ece044714ba7b9a59d3a1ab31
+    guid: 1adb0cf04f5cf1845a26d768f30b49fe
   - enabled: 1
     path: Assets/Scenes/KalipunanStation.unity
     guid: 449cc7d7e44005d4fa10cdc65f2eba52

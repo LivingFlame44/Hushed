@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2914025757590003125}
   - component: {fileID: 1814813101279511193}
   m_Layer: 0
-  m_Name: InspectMiguel'sPhoto
+  m_Name: InspectMiguel'sPhotoNoCutScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bab067c259bb154c8b328bd67ea262a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventIndex: 1
+  eventIndex: 0
 --- !u!1 &5985626158210874050
 GameObject:
   m_ObjectHideFlags: 0

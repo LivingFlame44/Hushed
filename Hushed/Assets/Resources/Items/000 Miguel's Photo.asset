@@ -16,4 +16,4 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: 522d72cf07f2b8740943e7c81097fdce, type: 3}
   itemName: Miguel's Photo
   itemInfo: 'A Photo of Miguel and Teresita celebrating her 65th birthday. '
-  itemInspectPrefab: {fileID: 4659546037290177675, guid: d7a3c271590582249adfb74b0f7fdb9b, type: 3}
+  itemInspectPrefab: {fileID: 4659546037290177675, guid: 2456fb517ce372144990fac8fd580187, type: 3}
