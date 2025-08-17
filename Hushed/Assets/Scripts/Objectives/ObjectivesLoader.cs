@@ -9,7 +9,7 @@ public class ObjectivesLoader : MonoBehaviour
     public ObjectiveManager objectiveManager;
     void Awake()
     {
-        objectives = Resources.LoadAll<Objective>(folderPath);
+        //objectives = Resources.LoadAll<Objective>(folderPath);
     }
 
     void Start()

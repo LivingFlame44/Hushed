@@ -24,7 +24,7 @@ public class NotificationManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        notificationValuesList = Resources.LoadAll<Notification>(folderPath);
+        //notificationValuesList = Resources.LoadAll<Notification>(folderPath);
         
 
     }

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c24d41884ee8745488faf0773bc005fc, type: 3}
-  m_Name: "01 Talk to the vendor selling \u201CPisbol\u201D to find out where the
-    Kalipunan Station is."
+  m_Name: "01 Talk to the vendor selling \u201CPisbol\u201D to01 Talk to Pisbol"
   m_EditorClassIdentifier: 
   objectiveID: 1
   objectiveInfo: "-Talk to the vendor selling \u201CPisbol\u201D to find out where
