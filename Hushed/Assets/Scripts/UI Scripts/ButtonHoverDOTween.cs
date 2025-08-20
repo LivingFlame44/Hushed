@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [Header("Highlight Fill")]
     public Image highlightImage;
@@ -11,37 +11,113 @@ public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     [Header("Text Fade")]
     public Image whiteImage;
-    public Image grayImage;
+    public Image blackImage;
     public float fadeDuration = 0.25f;
 
+    [Header("Button Group")]
+    public ButtonGroupManager buttonGroupManager;
+
+    private bool isSelected = false;
+
     private void Start()
+    {
+        ResetToDefaultState();
+    }
+
+    private void ResetToDefaultState()
     {
         if (highlightImage != null)
             highlightImage.fillAmount = 0f;
 
-        if (grayImage != null)
-            grayImage.color = new Color(grayImage.color.r, grayImage.color.g, grayImage.color.b, 0f); // start hidden
+        if (blackImage != null)
+            blackImage.color = new Color(blackImage.color.r, blackImage.color.g, blackImage.color.b, 0f);
+
+        if (whiteImage != null)
+            whiteImage.color = new Color(whiteImage.color.r, whiteImage.color.g, whiteImage.color.b, 1f);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (highlightImage != null)
-            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad);
+        if (isSelected) return;
 
-        if (grayImage != null)
-            grayImage.DOFade(1f, fadeDuration); // fade black in
-        if (whiteImage != null)
-            whiteImage.DOFade(0f, fadeDuration); // fade white out
+        AnimateHoverState();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (isSelected) return;
+
+        AnimateNormalState();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // Notify button group manager that this button was selected
+        if (buttonGroupManager != null)
+        {
+            buttonGroupManager.OnButtonSelected(this);
+        }
+
+        Select();
+    }
+
+    public void Select()
+    {
+        isSelected = true;
+        AnimateSelectedState();
+    }
+
+    public void Deselect()
+    {
+        isSelected = false;
+        AnimateNormalState();
+    }
+
+    private void AnimateHoverState()
+    {
+        // Kill any ongoing animations to prevent conflicts
+        highlightImage?.DOKill();
+        whiteImage?.DOKill();
+        blackImage?.DOKill();
+
+        if (highlightImage != null)
+            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad);
+
+        if (blackImage != null)
+            blackImage.DOFade(1f, fadeDuration);
+        if (whiteImage != null)
+            whiteImage.DOFade(0f, fadeDuration);
+    }
+
+    private void AnimateNormalState()
+    {
+        // Kill any ongoing animations
+        highlightImage?.DOKill();
+        whiteImage?.DOKill();
+        blackImage?.DOKill();
+
         if (highlightImage != null)
             highlightImage.DOFillAmount(0f, paintDuration).SetEase(Ease.InQuad);
 
-        if (grayImage != null)
-            grayImage.DOFade(0f, fadeDuration); // fade black out
+        if (blackImage != null)
+            blackImage.DOFade(0f, fadeDuration);
         if (whiteImage != null)
-            whiteImage.DOFade(1f, fadeDuration); // fade white back
+            whiteImage.DOFade(1f, fadeDuration);
+    }
+
+    private void AnimateSelectedState()
+    {
+        // Kill any ongoing animations
+        highlightImage?.DOKill();
+        whiteImage?.DOKill();
+        blackImage?.DOKill();
+
+        if (highlightImage != null)
+            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad);
+
+        if (blackImage != null)
+            blackImage.DOFade(1f, fadeDuration);
+        if (whiteImage != null)
+            whiteImage.DOFade(0f, fadeDuration);
     }
 }
