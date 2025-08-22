@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
-  m_Name: 03 Talk to Pisbol
+  m_Name: 04 Get Inside Station
   m_EditorClassIdentifier: 
-  notificationID: 3
-  notificationInfo: 'In the world of Hushed, asking people around you can be beneficial...or
-    dangerous.
-
-    Be aware of the people you talk to and the information they share.'
-  notificationType: 0
+  notificationID: 4
+  notificationInfo: "Get inside the station without alarming the \u2018Suspicious
+    looking men\u2019\n"
+  notificationType: 2

@@ -123,6 +123,17 @@ public class PlayerMovement : MonoBehaviour
         playerState = PlayerState.WALKHOLDING;
     }
 
+    public void MikaStationary()
+    {
+        //ResetAnimation();
+        horizontal = 0;
+        animator.SetBool("isInteracting", false);
+        animator.SetBool("isSitting", false);
+        animator.SetFloat("Speed", 0f);
+        animator.SetFloat("Horizontal", 0f);
+        playerState = PlayerState.STATIONARY;
+    }
+
     void Movement()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
