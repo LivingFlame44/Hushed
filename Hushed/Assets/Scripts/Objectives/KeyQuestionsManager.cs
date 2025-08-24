@@ -43,6 +43,7 @@ public class KeyQuestionsManager : MonoBehaviour
     {
         KeyQuestion keyQuestion = keyQuestions[questionID];
         GameObject keyQuestionPanel = Instantiate(keyQuestionPanelPrefab, keyQuestionsContainerPanel.transform);
+        keyQuestionPanel.SetActive(true);
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().keyQuestion = keyQuestion;
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().ShowKeyQuestion();
     }
