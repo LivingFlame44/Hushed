@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 public class GoonLookWalkManager : MonoBehaviour
 {
     public GameObject[] gooners;
-    public BoxCollider detectCollider;
+    public BoxCollider detectCollider, frontCollider;
 
     public GameObject player;
+   
 
-    public UnityEvent onDetectEvent;
-    public Vector3 startingPos;
+    public UnityEvent[] onDetectEventLists;
+    public Hide[] hidingSpots;
+
+    public Vector3 startingPos, playerStartPos;
 
     public float speed;
     public GoonerState state;
@@ -26,7 +29,8 @@ public class GoonLookWalkManager : MonoBehaviour
     void Start()
     {
         startingPos = transform.position;
-        StartCoroutine(LookBackInterval());
+        playerStartPos = player.transform.position;
+        //StartWalk();
     }
 
     // Update is called once per frame
@@ -50,7 +54,7 @@ public class GoonLookWalkManager : MonoBehaviour
 
     public IEnumerator LookBackInterval()
     {
-        int randomNum = Random.Range(2, 6);
+        int randomNum = Random.Range(3, 6);
         yield return new WaitForSeconds(randomNum);
         StartCoroutine(LookBack());
     }
@@ -69,11 +73,7 @@ public class GoonLookWalkManager : MonoBehaviour
     public IEnumerator LookBackTimer()
     {
         yield return new WaitForSeconds(2);
-        detectCollider.enabled = false;
-        gooners[0].GetComponent<Animator>().SetBool("looking", false);
-        gooners[1].GetComponent<Animator>().SetBool("looking", false);
-        StartCoroutine(LookBackInterval());
-        state = GoonerState.Walking;
+        StartWalk();
     }
 
     public void Walk()
@@ -82,12 +82,56 @@ public class GoonLookWalkManager : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    public void Idle()
+    {
+        state = GoonerState.Idle;
+    }
+
+    public void StartWalk()
+    {
+        detectCollider.enabled = false;
+        gooners[0].GetComponent<Animator>().SetBool("looking", false);
+        gooners[1].GetComponent<Animator>().SetBool("looking", false);
+        StartCoroutine(LookBackInterval());
+        state = GoonerState.Walking;
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            onDetectEvent.Invoke();
+            state = GoonerState.Looking;
+            StopAllCoroutines();
+            gooners[0].GetComponent<Animator>().SetBool("looking", true);         
+            gooners[1].GetComponent<Animator>().SetBool("looking", true);
+
+            int randomNum = Random.Range(0, 3);
+            onDetectEventLists[randomNum].Invoke();
             Debug.Log("Detected Player");
         }
+    }
+
+    public void RestartWalk()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //transform.position = startingPos;
+        //player.transform.GetChild(1).transform.position = playerStartPos;      
+
+        //foreach(Hide h in hidingSpots)
+        //{
+        //    h.hidingSprite.SetActive(false);
+        //    h.isHiding = false;
+        //}
+
+        //StartWalk();
+    }
+
+    public void StartCutSceneWalk()
+    {
+        StartWalk();
+        frontCollider.enabled = false;
+        StopAllCoroutines();
+        state = GoonerState.Walking;
+
     }
 }
