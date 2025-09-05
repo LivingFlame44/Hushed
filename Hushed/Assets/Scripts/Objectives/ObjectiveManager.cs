@@ -84,6 +84,7 @@ public class ObjectiveManager : MonoBehaviour
             }
 
             objectivesList[id].onObjectiveStartEvent.Invoke();
+            LevelData.instance.quests.Add(id);
         }  
     }
 
@@ -131,6 +132,7 @@ public class ObjectiveManager : MonoBehaviour
                     //inactiveObjectivesTextList.Add(currentObjectivesTextList[i]);
                     //currentObjectivesTextList.RemoveAt(i);
                     objectivesList[id].objectiveComplete = true;
+                    LevelData.instance.completedQuests.Add(id);
                     break;
                 }
             }

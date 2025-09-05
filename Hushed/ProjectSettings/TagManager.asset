@@ -9,6 +9,7 @@ TagManager:
   - KeyQuestionSlot
   - ClickableItem
   - Janitor
+  - Puzzle
   layers:
   - Default
   - TransparentFX

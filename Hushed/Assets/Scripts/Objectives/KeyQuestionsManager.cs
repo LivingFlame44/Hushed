@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
 
 public class KeyQuestionsManager : MonoBehaviour
@@ -46,5 +47,7 @@ public class KeyQuestionsManager : MonoBehaviour
         keyQuestionPanel.SetActive(true);
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().keyQuestion = keyQuestion;
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().ShowKeyQuestion();
+
+        LevelData.instance.keyQuestions.Add(questionID);
     }
 }

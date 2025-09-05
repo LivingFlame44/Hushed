@@ -70,6 +70,8 @@ public class InventoryManager : MonoBehaviour
 
         itemBtn.GetComponent<InventoryItemButton>().item = item;
         itemBtn.GetComponent<Image>().sprite = item.itemImage;
+
+        LevelData.instance.items.Add(itemID);
     }
 
     public void RemoveItem(int itemID)
@@ -85,6 +87,8 @@ public class InventoryManager : MonoBehaviour
                 inactiveItemBtnList.Add(btnToRemove);
                 activeItemBtnList.Remove(btnToRemove);
                 btnToRemove.SetActive(false);
+
+                LevelData.instance.removedItems.Add(itemID);
                 break;
             }
         }

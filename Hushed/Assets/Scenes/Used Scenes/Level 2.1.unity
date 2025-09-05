@@ -10835,6 +10835,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1823053114}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1292043252959764498, guid: cfd6b9015c0225c4e9c82c1bd29ae40e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1318935516}
     - targetCorrespondingSourceObject: {fileID: 1378922297957006227, guid: cfd6b9015c0225c4e9c82c1bd29ae40e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499329116}
@@ -24271,7 +24274,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 21, y: 7.5, z: 1}
+  m_Size: {x: 100, y: 40, z: 40}
   m_Center: {x: 4, y: 1, z: 0}
 --- !u!4 &1278851057
 Transform:
@@ -24993,6 +24996,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318736281}
   m_CullTransparentMesh: 1
+--- !u!1 &1318935512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1292043252959764498, guid: cfd6b9015c0225c4e9c82c1bd29ae40e, type: 3}
+  m_PrefabInstance: {fileID: 499329113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1318935516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318935512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.026846915, y: 0.4784849, z: 0.020000009}
+  m_Center: {x: -0.0034234638, y: 0.22924244, z: 0.000000007002566}
 --- !u!1 &1319901774
 GameObject:
   m_ObjectHideFlags: 0
@@ -28624,7 +28653,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 0
+    m_Time: 1.5
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -30362,7 +30391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667152968
 Transform:
   m_ObjectHideFlags: 0
@@ -38742,7 +38771,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1441946913}
         m_TargetAssemblyTypeName: Level2Manager, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: GoToLevel2_2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38782,7 +38811,7 @@ Transform:
   m_GameObject: {fileID: 2122796036}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.61, y: 1.8, z: 22.59}
+  m_LocalPosition: {x: 74.19, y: 1.8, z: 22.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
