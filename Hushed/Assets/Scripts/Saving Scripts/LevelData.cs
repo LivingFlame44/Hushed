@@ -13,6 +13,7 @@ public class LevelData : MonoBehaviour
     public List<int> items;
     public List<int> removedItems;
     public List<bool> gameObjectsStatus;
+    public List<GameObject> gameObjectsList;
     // Start is called before the first frame update
     private void Awake()
     {
