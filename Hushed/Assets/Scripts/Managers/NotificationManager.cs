@@ -54,7 +54,7 @@ public class NotificationManager : MonoBehaviour
             //notif.transform.position = spawnLocation;
             activeNotifList.Add(notif);
             notif.transform.GetChild(0).GetComponent<Transform>().localPosition = new Vector2(0,0);
-            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 342,
+            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 325,
             notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
 
             InsertValues(id, notif);
@@ -72,7 +72,7 @@ public class NotificationManager : MonoBehaviour
             //notif.transform.position = spawnLocation;
             
 
-            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 342,
+            notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x + 325,
             notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
 
             InsertValues(id, notif);
