@@ -68,8 +68,8 @@ MonoBehaviour:
   m_text: "In HUSHED, information is crucial. Pay close attention to what people
     say\u2014they might help you gather clues or solve cases."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1bad3789ffbd2164fb61cf1e1bb47c79, type: 2}
-  m_sharedMaterial: {fileID: 1105314988002004920, guid: 1bad3789ffbd2164fb61cf1e1bb47c79, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c951c1f1694e3b468ddbeaca711483d, type: 2}
+  m_sharedMaterial: {fileID: -2562683847991402936, guid: 9c951c1f1694e3b468ddbeaca711483d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16.5
+  m_fontSizeBase: 16.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -353,8 +353,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1d1cb64a0bb90464a97eda976335c33b, type: 2}
-  m_sharedMaterial: {fileID: 1594489120438020022, guid: 1d1cb64a0bb90464a97eda976335c33b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c951c1f1694e3b468ddbeaca711483d, type: 2}
+  m_sharedMaterial: {fileID: -2562683847991402936, guid: 9c951c1f1694e3b468ddbeaca711483d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
