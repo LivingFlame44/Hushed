@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using DG.Tweening;
 public class NotebookManager : MonoBehaviour
@@ -27,6 +28,14 @@ public class NotebookManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+        }
+
+        if (SceneManager.GetActiveScene().name != "Level 1")
+        {
+            notebookInteracted = true;
+            mainObjectiveInteracted = true;
+            questsInteracted = true;
+            phoneInteracted = true;
         }
     }
 
@@ -97,5 +106,14 @@ public class NotebookManager : MonoBehaviour
     public void ObjectivesTutorial()
     {
         notificationManager.ShowNotification(0);
+    }
+
+    public void MainObjectivesTutorial()
+    {
+        if (!mainObjectiveInteracted)
+        {
+            mainObjectiveInteracted = true;
+            notificationManager.ShowNotification(19);
+        }
     }
 }

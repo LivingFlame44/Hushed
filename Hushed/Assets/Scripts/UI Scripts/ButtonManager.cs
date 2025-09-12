@@ -9,6 +9,11 @@ public class ButtonGroupManager : MonoBehaviour
     private void Start()
     {
         // Deselect all buttons at start
+        //DeselectAllButtons();
+    }
+
+    private void OnEnable()
+    {
         DeselectAllButtons();
     }
 

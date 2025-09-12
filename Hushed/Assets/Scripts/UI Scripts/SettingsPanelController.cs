@@ -23,10 +23,10 @@ public class SettingsPanelController : MonoBehaviour
         mainMenuCanvasGroup.DOFade(0f, fadeDuration).OnComplete(() =>
         {
             mainMenuCanvasGroup.gameObject.SetActive(false);
-        });
+        }).SetUpdate(true);
 
         // Fade Settings panel in
-        settingsCanvasGroup.DOFade(1f, fadeDuration);
+        settingsCanvasGroup.DOFade(1f, fadeDuration).SetUpdate(true);
     }
 
     public void CloseSettings()
@@ -35,12 +35,12 @@ public class SettingsPanelController : MonoBehaviour
         mainMenuCanvasGroup.gameObject.SetActive(true);
 
         // Fade MainMenu in
-        mainMenuCanvasGroup.DOFade(1f, fadeDuration);
+        mainMenuCanvasGroup.DOFade(1f, fadeDuration).SetUpdate(true);
 
         // Fade Settings panel out
         settingsCanvasGroup.DOFade(0f, fadeDuration).OnComplete(() =>
         {
             settingsPanel.SetActive(false);
-        });
+        }).SetUpdate(true);
     }
 }

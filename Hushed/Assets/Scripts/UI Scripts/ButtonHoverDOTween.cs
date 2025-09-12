@@ -21,6 +21,11 @@ public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     private void Start()
     {
+        //ResetToDefaultState();
+    }
+
+    private void OnEnable()
+    {
         ResetToDefaultState();
     }
 
@@ -81,12 +86,12 @@ public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerE
         blackImage?.DOKill();
 
         if (highlightImage != null)
-            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad);
+            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad).SetUpdate(true);
 
         if (blackImage != null)
-            blackImage.DOFade(1f, fadeDuration);
+            blackImage.DOFade(1f, fadeDuration).SetUpdate(true);
         if (whiteImage != null)
-            whiteImage.DOFade(0f, fadeDuration);
+            whiteImage.DOFade(0f, fadeDuration).SetUpdate(true);
     }
 
     private void AnimateNormalState()
@@ -97,12 +102,12 @@ public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerE
         blackImage?.DOKill();
 
         if (highlightImage != null)
-            highlightImage.DOFillAmount(0f, paintDuration).SetEase(Ease.InQuad);
+            highlightImage.DOFillAmount(0f, paintDuration).SetEase(Ease.InQuad).SetUpdate(true);
 
         if (blackImage != null)
-            blackImage.DOFade(0f, fadeDuration);
+            blackImage.DOFade(0f, fadeDuration).SetUpdate(true);
         if (whiteImage != null)
-            whiteImage.DOFade(1f, fadeDuration);
+            whiteImage.DOFade(1f, fadeDuration).SetUpdate(true);
     }
 
     private void AnimateSelectedState()
@@ -113,11 +118,11 @@ public class ButtonHoverDOTween : MonoBehaviour, IPointerEnterHandler, IPointerE
         blackImage?.DOKill();
 
         if (highlightImage != null)
-            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad);
+            highlightImage.DOFillAmount(1f, paintDuration).SetEase(Ease.OutQuad).SetUpdate(true);
 
         if (blackImage != null)
-            blackImage.DOFade(1f, fadeDuration);
+            blackImage.DOFade(1f, fadeDuration).SetUpdate(true);
         if (whiteImage != null)
-            whiteImage.DOFade(0f, fadeDuration);
+            whiteImage.DOFade(0f, fadeDuration).SetUpdate(true);
     }
 }

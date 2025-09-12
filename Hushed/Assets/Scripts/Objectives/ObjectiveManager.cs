@@ -22,6 +22,8 @@ public class Objectives
 public class ObjectiveManager : MonoBehaviour
 {
     public static ObjectiveManager instance;
+
+    public bool hasSaveProgress;
     public GameObject objectiveTextPrefab;
     public GameObject objectiveTextsPanel;
     public List<Objective> objectivesList = new List<Objective>();
@@ -84,7 +86,11 @@ public class ObjectiveManager : MonoBehaviour
             }
 
             objectivesList[id].onObjectiveStartEvent.Invoke();
-            LevelData.instance.quests.Add(id);
+            if (hasSaveProgress)
+            {
+                LevelData.instance.quests.Add(id);
+            }
+                
         }  
     }
 
@@ -132,7 +138,11 @@ public class ObjectiveManager : MonoBehaviour
                     //inactiveObjectivesTextList.Add(currentObjectivesTextList[i]);
                     //currentObjectivesTextList.RemoveAt(i);
                     objectivesList[id].objectiveComplete = true;
-                    LevelData.instance.completedQuests.Add(id);
+                    if (hasSaveProgress)
+                    {
+                        LevelData.instance.completedQuests.Add(id);
+                    }
+                    
                     break;
                 }
             }

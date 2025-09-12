@@ -2,22 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEditor.Experimental.GraphView.GraphView;
 using static UnityEditor.Progress;
 
 public class JigsawPuzzleManager : MonoBehaviour
 {
     public List<PuzzlePiece> puzzlePieces = new List<PuzzlePiece>();
+    public List<PuzzlePiece> startingOrder = new List<PuzzlePiece>();
+    public List<Vector3> startingPuzzlePos = new List<Vector3>();
 
     public PuzzlePiece[] correctOrder1, correctOrder2, correctOrder3;
 
     public PuzzleConnectorCollider[] puzzleConnectors;
 
-    public 
+    public UnityEvent onCompleteEvent;
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (var piece in puzzlePieces) 
+        { 
+            startingOrder.Add(piece);
+            startingPuzzlePos.Add(piece.gameObject.transform.position);
+        }
     }
 
     // Update is called once per frame
@@ -26,8 +33,10 @@ public class JigsawPuzzleManager : MonoBehaviour
         if(ConnectorChecker() && (CheckOrder1() || CheckOrder2() || CheckOrder3()))
         {
             Debug.Log("Puzzle Finished");
+            onCompleteEvent.Invoke();
         }
     }
+
 
     public bool ConnectorChecker()
     {

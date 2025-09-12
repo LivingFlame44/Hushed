@@ -8,6 +8,8 @@ using static UnityEditor.Progress;
 public class KeyQuestionsManager : MonoBehaviour
 {
     public static KeyQuestionsManager instance;
+    public bool hasSaveProgress;
+
     public KeyQuestion[] keyQuestions;
     private string folderPath = "KeyQuestions"; // Folder name inside the Assets/Resources folder
 
@@ -47,7 +49,10 @@ public class KeyQuestionsManager : MonoBehaviour
         keyQuestionPanel.SetActive(true);
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().keyQuestion = keyQuestion;
         keyQuestionPanel.GetComponent<KeyQuestionPanel>().ShowKeyQuestion();
-
-        LevelData.instance.keyQuestions.Add(questionID);
+        if (hasSaveProgress)
+        {
+            LevelData.instance.keyQuestions.Add(questionID);
+        }
+        
     }
 }
