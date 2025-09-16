@@ -77,7 +77,7 @@ public class PauseManager : MonoBehaviour, IPointerDownHandler
         pausePanel.SetActive(true);
         //pauseBtn.SetActive(false);
         GameManager.instance.gameState = GameManager.GameState.PAUSED;
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
     public void Settings()
     {

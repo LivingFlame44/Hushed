@@ -133,7 +133,8 @@ public class NotificationManager : MonoBehaviour
     }
 
     public IEnumerator NotificationCountdown(GameObject notif)
-    {      
+    {
+        //StartCoroutine(ClampNotifTimer(new Vector3(325,0,0),notif));
         yield return new WaitForSeconds(7.5f);
         HideNotification(notif);
         Debug.Log("HIde notif");
@@ -141,7 +142,7 @@ public class NotificationManager : MonoBehaviour
     public void HideNotification(GameObject notif)
     {
         //GameObject notif = activeNotifList[0];
-        notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x -342,
+        notif.transform.GetChild(0).GetComponent<RectTransform>().DOAnchorPos(new Vector2(notif.transform.GetChild(0).GetComponent<Transform>().localPosition.x -325,
             notif.transform.GetChild(0).GetComponent<Transform>().localPosition.y), 0.25f);
 
         StartCoroutine(HideNotificationCountdown(notif));
@@ -155,6 +156,13 @@ public class NotificationManager : MonoBehaviour
         inactiveNotifList.Add(notif);
         
         notif.SetActive(false);
+
+    }
+
+    public IEnumerator ClampNotifTimer(Vector3 vector, GameObject notif)
+    {
+        yield return new WaitForSeconds(0.25f);
+        notif.transform.GetChild(0).GetComponent<Transform>().localPosition = vector;
 
     }
 }
