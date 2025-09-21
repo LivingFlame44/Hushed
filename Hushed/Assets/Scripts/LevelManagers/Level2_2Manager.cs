@@ -17,6 +17,7 @@ public class Level2_2Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("CurrentLevelIndex", SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(WaitLoad());
     }
 

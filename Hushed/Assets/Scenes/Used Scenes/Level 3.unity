@@ -8389,6 +8389,218 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &504019875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504019876}
+  - component: {fileID: 504019882}
+  - component: {fileID: 504019881}
+  - component: {fileID: 504019880}
+  - component: {fileID: 504019879}
+  - component: {fileID: 504019878}
+  - component: {fileID: 504019877}
+  m_Layer: 0
+  m_Name: Mika FInish Inspect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504019876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 673227682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504019877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Okay, sapat na \u2018to para puntahan etong Warehouse na ito. Miguel
+        sana ayos ka lang, kaunti nalang mahahanap na rin kita.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &504019878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Hindi ito tugma, kailangan kong i-check ng mabuti.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &504019879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Kailangan kong puntahan \u2018to.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &504019880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Kailangan kong i-check ito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &504019881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Hindi pa sapat ang ebidensiya ko rito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &504019882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504019875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Pwede ko na siguro sagutin mga katanungan ko.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &505295924
 GameObject:
   m_ObjectHideFlags: 0
@@ -11534,6 +11746,112 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &649306174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649306175}
+  - component: {fileID: 649306177}
+  - component: {fileID: 649306176}
+  m_Layer: 0
+  m_Name: Teresita
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &649306175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649306174}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.1, z: -0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1491784830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &649306176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649306174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15, y: 15, z: 15.593957}
+  m_Center: {x: 0, y: 0, z: -7.896978}
+--- !u!212 &649306177
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649306174}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b0598f2a15fb89146833366dde2782b8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.575, y: 8.335}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &654634817
 GameObject:
   m_ObjectHideFlags: 0
@@ -11643,7 +11961,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1723533681}
+  - {fileID: 2002333855}
+  - {fileID: 1177524333}
+  - {fileID: 504019876}
   m_Father: {fileID: 930238262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &673227683
@@ -20445,6 +20767,188 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174244386}
   m_CullTransparentMesh: 1
+--- !u!1 &1177524332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177524333}
+  - component: {fileID: 1177524338}
+  - component: {fileID: 1177524337}
+  - component: {fileID: 1177524336}
+  - component: {fileID: 1177524335}
+  - component: {fileID: 1177524334}
+  m_Layer: 0
+  m_Name: Mikaela Real Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1177524333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 673227682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1177524334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Sapat na \u2018to para sa mapang ito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1177524335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Baka meron pa isa rito na pwede ko tingnan.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1177524336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oh andito ata yung Guard. Baka pwede ko siyang pagtanungan.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1177524337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oh locker room sa 2nd Floor. Baka may kinalaman rito yung mapa ni
+        Miguel.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1177524338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177524332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Ano bang meron dito sa Mapang ito?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &1187386722
 GameObject:
   m_ObjectHideFlags: 0
@@ -23040,6 +23544,177 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1334714538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334714541}
+  - component: {fileID: 1334714540}
+  - component: {fileID: 1334714539}
+  m_Layer: 0
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1334714539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334714538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '[F] to talk'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 5
+  m_fontSizeBase: 5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1334714540}
+  m_maskType: 0
+--- !u!23 &1334714540
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334714538}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &1334714541
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334714538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
+  m_LocalScale: {x: 1.7880937, y: 3.3826556, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1681497513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1345060172
 GameObject:
   m_ObjectHideFlags: 0
@@ -25462,6 +26137,266 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1491784825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491784830}
+  - component: {fileID: 1491784829}
+  - component: {fileID: 1491784828}
+  - component: {fileID: 1491784827}
+  - component: {fileID: 1491784826}
+  m_Layer: 0
+  m_Name: Roger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1491784826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491784825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: Roger
+    dialogueSpeakerImage: {fileID: 21300000, guid: a88d4adc44d1f5445b1c2089e9f4fa2b, type: 3}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oh...\u2019Tay ikaw pal-\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Ano \u2018tong nakita ko na hinahabol ka sa Stasyon, Mika?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Ayos ka lang ba? Sino \u2018tong mga to? Nasa panganib ba ang buhay
+        mo?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Hindi, \u2018Tay. May kaso lang ako na hinahawakan ngayon. Missing
+        person \u2019ho.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Nag-aalala lang naman ako. Ngayon lang ulit kita nakita.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"...\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Hinding hindi ako babalik.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Kung gusto mo na ganitong trabaho, bakit hindi ka nalang bumalik.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Eto na naman tayo, Mikaela. Sinabi ko nang \u2018wag ka na mangielam
+        sa mga kaso na hawak na namin.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Hindi na ako bata, at kung iyan lang pinunta niyo rito. Pwede na kayong
+        umalis. Salamat.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Roger
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Pasensiya na. Kung sino man yung mga humabol sayo, hahanapin namin
+        sila. Andito pa rin ang kapulisan kung kailangan mo ng tulong.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oo, andiyan kayo alam ko.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1491784827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491784825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd8186b4bc67e1438d75112819e1859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: {fileID: 1334714538}
+  interactMessage: '[E] Talk'
+  priorityText: 0
+  interactEnabled: 0
+  interacted: 0
+--- !u!65 &1491784828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491784825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2.2, z: 5}
+  m_Center: {x: 0, y: 0, z: 1}
+--- !u!212 &1491784829
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491784825}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9db12d59c7b39ab40840282660fc6a8b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.6666666, y: 2.5166667}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1491784830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491784825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.6, y: -1.32, z: -1.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1681497513}
+  - {fileID: 649306175}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512667125
 GameObject:
   m_ObjectHideFlags: 0
@@ -29879,6 +30814,91 @@ PrefabInstance:
       addedObject: {fileID: 552738008}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d8e4442dc18d94da2927c5e02773e9, type: 3}
+--- !u!1 &1681497512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1681497513}
+  - component: {fileID: 1681497514}
+  m_Layer: 0
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1681497513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681497512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1334714541}
+  m_Father: {fileID: 1491784830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1681497514
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681497512}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d15271fcb8e595d4db43176ada44e71f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.88235295}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 2.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1683673600
 GameObject:
   m_ObjectHideFlags: 0
@@ -30975,6 +31995,227 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721399973}
   m_CullTransparentMesh: 1
+--- !u!1 &1723533680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723533681}
+  - component: {fileID: 1723533684}
+  - component: {fileID: 1723533683}
+  - component: {fileID: 1723533682}
+  m_Layer: 0
+  m_Name: Mikaela Monologues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1723533681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723533680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 673227682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723533682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723533680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"...\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1271097791}
+            m_TargetAssemblyTypeName: NotificationManager, Assembly-CSharp
+            m_MethodName: ShowNotification
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1271097791}
+            m_TargetAssemblyTypeName: NotificationManager, Assembly-CSharp
+            m_MethodName: ShowNotification
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 2
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1884982503}
+            m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+            m_MethodName: ShowNewObjective
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1884982503}
+            m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+            m_MethodName: ShowNewObjective
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 2
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Kailangan kong alamin, kung ano ba ang pakay ni Miguel rito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Pangalawa, Kailangan kong malaman kung para saan ba itong mapa na
+        ito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"At Pangatlo, Asan nga ba si Miguel?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &1723533683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723533680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Sino yan?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1884982503}
+            m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+            m_MethodName: ShowNewObjective
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1271097791}
+            m_TargetAssemblyTypeName: NotificationManager, Assembly-CSharp
+            m_MethodName: ShowNotification
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+--- !u!114 &1723533684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723533680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Bakit kailangan niyang, gumawa ng mapa kung saan siya nag-tra-trabaho?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!4 &1724288794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5987847845712397652, guid: 968ae7e191c4014499dd847a7e0bf575, type: 3}
@@ -35587,6 +36828,188 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992716959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2002333854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002333855}
+  - component: {fileID: 2002333860}
+  - component: {fileID: 2002333859}
+  - component: {fileID: 2002333858}
+  - component: {fileID: 2002333857}
+  - component: {fileID: 2002333856}
+  m_Layer: 0
+  m_Name: Mikaela Drawing Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002333855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 673227682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2002333856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Sapat na \u2018to para sa mapang ito.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &2002333857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Baka meron pa isa rito na pwede ko tingnan.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &2002333858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oh CCTV? Baka pwede ko mapagtanungan kung ano ginawa ni Miguel nung
+        araw na nawala siya.\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &2002333859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Oh may X dito. 2nd Floor. Anong lugar ito?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+--- !u!114 &2002333860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002333854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6085447d272c45b9e2befa598e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueName: 
+    dialogueSpeaker: 
+    dialogueSpeakerImage: {fileID: 0}
+    dialogueEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    dialogueLines:
+    - hasChoice: 0
+      character:
+        name: Mikaela
+        icon: {fileID: 21300000, guid: 230bc07e83fc46d42941dca04805ae79, type: 3}
+      line: "\"Ano bang meron dito sa Mapang ito?\u201D"
+      choices: []
+      onEndLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &2003031009
 GameObject:
   m_ObjectHideFlags: 0
@@ -39782,6 +41205,7 @@ SceneRoots:
   - {fileID: 13040385}
   - {fileID: 1774779535746093093}
   - {fileID: 70509926}
+  - {fileID: 1491784830}
   - {fileID: 330158890}
   - {fileID: 823186518}
   - {fileID: 2010051620}

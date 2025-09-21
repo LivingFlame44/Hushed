@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Level1Manager : MonoBehaviour
 {
     public Scrollbar firstQuestScrollbar;
@@ -13,6 +15,7 @@ public class Level1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("CurrentLevelIndex", SceneManager.GetActiveScene().buildIndex);
         questNumber = QuestNumber.ZERO;
     }
     public enum QuestNumber

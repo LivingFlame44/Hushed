@@ -111,6 +111,9 @@ public class NotificationManager : MonoBehaviour
             case Notification.NotificationType.HINT:
                 obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hint";
                 break;
+            case Notification.NotificationType.OBJECTIVE:
+                obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Objective";
+                break;
             case Notification.NotificationType.MORE:
                 obj.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "More Notifications";
                 break;
