@@ -5280,8 +5280,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5370,7 +5370,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5578,7 +5578,7 @@ Transform:
   m_GameObject: {fileID: 223744761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7753,8 +7753,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7843,7 +7843,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7891,7 +7891,7 @@ Transform:
   m_GameObject: {fileID: 313272262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10093,7 +10093,7 @@ Transform:
   m_GameObject: {fileID: 425941325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10398,7 +10398,7 @@ Transform:
   m_GameObject: {fileID: 450868047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11552,8 +11552,8 @@ Transform:
   m_GameObject: {fileID: 495000307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
-  m_LocalScale: {x: 1.2108985, y: 0.29562572, z: 1}
+  m_LocalPosition: {x: 1.41, y: 2.84, z: 0.39}
+  m_LocalScale: {x: 1.6172807, y: 0.36210972, z: 1.2563}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1632339496}
@@ -18618,8 +18618,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18708,7 +18708,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21090,8 +21090,8 @@ Transform:
   m_GameObject: {fileID: 866602438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
-  m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
+  m_LocalPosition: {x: 0.123, y: 2.123, z: 0.39}
+  m_LocalScale: {x: 0.4886598, y: 0.2586725, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1908926108}
@@ -22350,7 +22350,7 @@ Transform:
   m_GameObject: {fileID: 932265973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27366,7 +27366,7 @@ Transform:
   m_GameObject: {fileID: 1268253787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 0.04, z: 0.39}
+  m_LocalPosition: {x: 1.41, y: 2, z: 0.39}
   m_LocalScale: {x: 0.5592548, y: 0.29562572, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28639,8 +28639,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28729,7 +28729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32753,15 +32753,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632339495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.009999871}
-  m_LocalScale: {x: 0.825833, y: 3.3826556, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.009999898}
+  m_LocalScale: {x: 0.7767977, y: 3.4693902, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 495000309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.082847595}
   m_SizeDelta: {x: 10, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632339497
@@ -32786,8 +32786,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[E]Enter Kalipunan Station'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -32876,7 +32876,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38912,8 +38912,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -39002,7 +39002,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39032,15 +39032,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908926105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.01}
-  m_LocalScale: {x: 1.7880937, y: 3.3826556, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.009999871}
+  m_LocalScale: {x: 2.0464134, y: 3.8658922, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 866602439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.026604414, y: -0.050256968}
   m_SizeDelta: {x: 10, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1911436786
@@ -40870,8 +40870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40960,7 +40960,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42673,8 +42673,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[F] to talk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
-  m_sharedMaterial: {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d87c3091513fe304c91250a516f6092d, type: 2}
+  m_sharedMaterial: {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42763,7 +42763,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4099488167099117063, guid: fff79a27d0988a44fbbaa1d662254ac8, type: 2}
+  - {fileID: -4362485392398699576, guid: d87c3091513fe304c91250a516f6092d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
