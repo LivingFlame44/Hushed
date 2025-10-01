@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: 38a306dc7b5b8404dadb158e1e2f62fa
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arrow_Blue
+    second: {fileID: 2800000, guid: 675a908df6507124a869124920496267, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2800000, guid: fd6ece89ab85de948b4c242325ff91a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DiamondPlate007D_2K-PNG_Color
+    second: {fileID: 2800000, guid: 80ddd165d36b795418e6dc30ab955ba8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DiamondPlate007D_2K-PNG_Metalness
+    second: {fileID: 2800000, guid: c55fd61d1e655df4fabd37731e1c4930, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DiamondPlate007D_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: bb847d1f59dff0c47a4188413d4b3354, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DiamondPlate007D_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: e17ea45677c927044a6b109ad16efe21, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DirtyWhite
+    second: {fileID: 2800000, guid: 9cfa265c743c2c74fbdfc88bf3df6938, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dirty_White
+    second: {fileID: 2800000, guid: 762db3aabc420a64abb88f24e27e7fbd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fire_Extinguisher
+    second: {fileID: 2800000, guid: 69969ddc1fbe9ce4fb4225fb6b7a021c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gray
+    second: {fileID: 2800000, guid: bea5d968a47e72d429e85e6883c9e278, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gray_Light
+    second: {fileID: 2800000, guid: ab77098eda230f149b48774e9355798e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: No Smoking, Eating, Drinking
+    second: {fileID: 2800000, guid: edf72c1a10c250b4a83e8c7bfe943db2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2800000, guid: c7f04206e3be4ac4b9e0dfbdacbb79d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Outlet
+    second: {fileID: 2800000, guid: 853f74913ecfefa47b7cf476e5713547, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones136_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 12ac9a15b714ff042907e8b31ce5d3a1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones136_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: ad904ac9b5e65a04cbab1dbc20cf826c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic012B_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: d2a010286c3881646b1d759cab541c91, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic018A_2K-PNG_Color
+    second: {fileID: 2800000, guid: 70bee2b88b0859a41b4aa4233934aad1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic018A_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 0731b0d7e0ff44041a316204c9f43b64, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic018A_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 6b3b792423748444198ec3c750f83c4e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS003_COL_WM
+    second: {fileID: 2800000, guid: a2690f0792a62a649aad7cc3199850d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS003_NRM_WM
+    second: {fileID: 2800000, guid: 6abffb88a648f434382e53e2d5397e65, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS003_REFL_WM
+    second: {fileID: 2800000, guid: f1193d27d04c5b34ab4f72e50f308b2b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS005_COL_WM
+    second: {fileID: 2800000, guid: 9c6acdeba34318f4eb08f20f929200b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS005_NRM_WM
+    second: {fileID: 2800000, guid: be2afbfbb88fe4641906190f0b84840c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticABS005_REFL_WM
+    second: {fileID: 2800000, guid: 37df37ee8ea7b9649950cd89c07d22f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Poliigon_MetalSteelBrushed_7174_Metallic
+    second: {fileID: 2800000, guid: 544d43c8df6e9674cb1fdffcbba35115, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Poliigon_MetalSteelBrushed_7174_Normal
+    second: {fileID: 2800000, guid: 8193a467f8da0c448bedc0e88d2b00b7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Poliigon_MetalSteelBrushed_7174_Roughness
+    second: {fileID: 2800000, guid: 3ac536040c5d45e4da7b689875dbb4a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Porcelain002_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 3441e155079210749a039c68c715f768, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Porcelain002_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 4b01367d01051384791ce3504ebc8b7f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Route_Map
+    second: {fileID: 2800000, guid: d82a06a0c02c865428a5b69f93266f07, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Route_Map2
+    second: {fileID: 2800000, guid: 2a6e6f53307ee50459884094f0b6ae81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Text_PassengerAssistanceOffice
+    second: {fileID: 2800000, guid: 5eaa1e214fb23f747bf95ff134b447cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles040_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 25b11f1a11b23c34580276f2d6363145, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles040_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 1846f05bf23458049b90e70153bd2c1e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles135A_2K-PNG_Color
+    second: {fileID: 2800000, guid: 644c38d6a4220fe44b4f3bed32865ba5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles135A_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 12314a940e38571479438dbdab3eafb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles135A_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 414bf22e040c8f3499811c60dcc86385, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ventilation
+    second: {fileID: 2800000, guid: 3f96da33e356b844a895b6e1cb26302a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2800000, guid: fedbd280434d38a4887aad83607f9bf1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WoodSiding008_2K-PNG_Metalness
+    second: {fileID: 2800000, guid: 7f6846158b97c1e41a96693fa91e34d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WoodSiding008_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 3b2971356284a554db9f9548f054da30, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WoodSiding008_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 91b052d1b5fa67d40b1ef3c9fb70e3fd, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
