@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7e22f5b5adcc640897e2e2416d87de, type: 3}
-  m_Name: 000 Kizz Recipe
+  m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
+  m_Name: "11 Received \u201CGuard House"
   m_EditorClassIdentifier: 
-  craftedEvidence: {fileID: 11400000, guid: aed546983cfe2ab479ba9f35d0dc7174, type: 2}
-  evidenceRecipe: 010000000200000000000000
+  notificationID: 11
+  notificationInfo: "You\u2019ve received a clue. \u201CGuard House.\u201D"
+  notificationType: 1

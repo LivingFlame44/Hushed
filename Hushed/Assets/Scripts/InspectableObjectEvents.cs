@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 public class InspectableObjectEvents : MonoBehaviour
 {
-    public int eventIndex;
+    public int endEventIndex;
+
+    public int startEventIndex;
     // Start is called before the first frame update
     void Start()
     {

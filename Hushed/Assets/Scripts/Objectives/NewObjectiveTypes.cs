@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Events;
 using static InspectSystem;
@@ -55,6 +56,14 @@ public class NewObjectiveTypes : MonoBehaviour
 
         obj.SetActive(true);
         inspectSystem.GetComponent<InspectSystem>().objectToInspect = obj.GetComponent<Transform>();
+
+        if (obj.GetComponent<InspectableObjectEvents>() != null)
+        {
+            if(obj.GetComponent<InspectableObjectEvents>().startEventIndex != 0)
+            {
+                inspectSystem.GetComponent<InspectSystem>().inspectEvents[obj.GetComponent<InspectableObjectEvents>().startEventIndex].Invoke();
+            }
+        }
     }
 
     public void AddEventOnInspectStop(OnInspectStop eventOnStop)

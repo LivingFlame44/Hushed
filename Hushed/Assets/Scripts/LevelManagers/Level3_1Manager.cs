@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class Level3_1Manager : MonoBehaviour
 {
     public List<UnityEvent> level3Events = new List<UnityEvent>();
+    
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +35,7 @@ public class Level3_1Manager : MonoBehaviour
     {
         level3Events[i].Invoke();
     }
+
+    
 
 }

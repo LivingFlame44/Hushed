@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class EvidenceCraftingManager : MonoBehaviour
@@ -11,12 +12,15 @@ public class EvidenceCraftingManager : MonoBehaviour
     public static EvidenceCraftingManager instance;
     public int[] evidenceInSlotList = {0,0,0};
 
+    public List<UnityEvent> onCraftedEvents = new List<UnityEvent>();
+
     public GameObject[] evidenceSlotList;
 
     private string folderPath = "Recipe";
     public Recipe[] recipes;
 
     public GameObject newEvidenceBtn, duplicateEvidenceErrorText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -132,6 +136,10 @@ public class EvidenceCraftingManager : MonoBehaviour
             ReturnAllEvidence();
             newEvidenceBtn.SetActive(false);
 
+            if (evidence.onCraftedEventNum != 0) 
+            {
+                onCraftedEvents[evidence.onCraftedEventNum].Invoke();
+            }
             EvidenceManager.instance.UnlockNewEvidence(evidence.evidenceID);
         }
         

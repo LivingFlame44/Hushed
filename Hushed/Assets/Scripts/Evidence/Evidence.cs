@@ -14,6 +14,7 @@ public class Evidence : ScriptableObject
 
     public Sprite evidenceImage;
     public string evidenceInfo;
+    public int onCraftedEventNum;
     public enum EvidenceType
     {      
         Evidence,

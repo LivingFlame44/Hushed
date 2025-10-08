@@ -18,6 +18,8 @@ public class InspectSystem : MonoBehaviour
 
     public List<UnityEvent> inspectClickEvents = new List<UnityEvent>();
 
+    public List<UnityEvent> inspectEvents = new List<UnityEvent>();
+
     public delegate void OnInspectStop();
     public OnInspectStop onInspectStop;
 
@@ -63,16 +65,20 @@ public class InspectSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            //objectToInspect.GetComponent<InspectableObjectEvents>().inspectableObjectEvent.Invoke();
-            inspectEndEvents[objectToInspect.GetComponent<InspectableObjectEvents>().eventIndex].Invoke();
-            objectToInspect.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
+            EndInspect();
         }
 
         Zoom();
     }
 
-    
+    public void EndInspect()
+    {
+        //objectToInspect.GetComponent<InspectableObjectEvents>().inspectableObjectEvent.Invoke();
+        inspectEndEvents[objectToInspect.GetComponent<InspectableObjectEvents>().endEventIndex].Invoke();
+        objectToInspect.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
+    }
+
     public void Zoom()
     {
         

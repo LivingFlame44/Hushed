@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cf7772534fc06146af9ac15fe209df4, type: 3}
-  m_Name: 003 Marine Pic 1
+  m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
+  m_Name: 12 Quest Open NTBK
   m_EditorClassIdentifier: 
-  evidenceName: New Crafted Evidence
-  evidenceID: 3
-  evidenceType: 0
-  iconType: 2
-  evidenceImage: {fileID: 0}
-  evidenceInfo: 
+  notificationID: 12
+  notificationInfo: Open your Notebook, and complete your objectives.
+  notificationType: 2
