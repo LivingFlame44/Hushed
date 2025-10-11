@@ -3,7 +3,12 @@ guid: ddbea51d3ca612244ab296886c3f8ec1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: daniel-honies-4fLG2C4Y6F8-unsplash
+    second: {fileID: 2100000, guid: 700740c2358cb464a994a2a4764bd01d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
