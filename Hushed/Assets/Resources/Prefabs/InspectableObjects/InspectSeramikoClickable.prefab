@@ -235,4 +235,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bab067c259bb154c8b328bd67ea262a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventIndex: 1
+  endEventIndex: 2
+  startEventIndex: 2

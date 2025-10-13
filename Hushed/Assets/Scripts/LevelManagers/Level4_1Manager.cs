@@ -10,7 +10,7 @@ public class Level4_1Manager : MonoBehaviour
 
     public InspectSystem inspectSystem;
 
-    public int miguelMapPointsFound, warehouseMapPointsFound;
+    public int miguelMapPointsFound, warehouseMapPointsFound, keyQuestionsSolved;
     public bool miguelMapInspected, warehouseMapInspected;
 
     public GameObject[] dialogueLines;
@@ -85,6 +85,16 @@ public class Level4_1Manager : MonoBehaviour
         {
             level4_1Events[4].Invoke();
        
+        }
+    }
+
+    public void SolveKeyQuestion()
+    {
+        keyQuestionsSolved++;
+        if(keyQuestionsSolved >= 2)
+        {
+            NotebookManager.instance.CloseNotebook();
+            dialogueLines[2].GetComponentAtIndex<DialogueTrigger>(6).TriggerDialogue();
         }
     }
 

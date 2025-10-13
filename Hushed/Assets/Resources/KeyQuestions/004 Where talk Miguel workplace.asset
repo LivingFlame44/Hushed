@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionID: 4
   questionName: Where can I go to talk to about Miguel in his workplace?
-  questionAnswerID: 2
-  questionAnswer: Kalipunan Train Station
+  questionAnswerID: 8
+  questionAnswer: Guard Employee
   eventOnAnswerNum: 0

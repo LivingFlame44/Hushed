@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24d41884ee8745488faf0773bc005fc, type: 3}
   m_Name: 03 Find Interest Miguel Map.
   m_EditorClassIdentifier: 
-  objectiveID: 2
+  objectiveID: 3
   objectiveInfo: -Find Points of Interest in Miguel's Map.
   objectiveComplete: 0
   prerequisiteObjectiveIDs: 

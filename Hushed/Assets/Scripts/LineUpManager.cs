@@ -92,7 +92,14 @@ public class NPCLineManager : MonoBehaviour
             // Move remaining NPCs to the right
             for (int i = 0; i < npcs.Count; i++)
             {
-                Vector3 targetPosition = npcStartPositions[i]; // Move to the next position
+                Animator animator;
+
+                animator = npcs[i].GetComponent<Animator>();
+
+                Vector3 targetPosition = new Vector3(npcStartPositions[i].x, npcs[i].transform.position.y, npcs[i].transform.position.z); // Move to the next position
+
+                animator.SetBool("isWalking", true);
+
                 while (Vector3.Distance(npcs[i].transform.position, targetPosition) > 0.01f)
                 {
                     npcs[i].transform.position = Vector3.MoveTowards(
@@ -103,6 +110,7 @@ public class NPCLineManager : MonoBehaviour
                     yield return null; // Wait until next frame
                 }
                 npcs[i].transform.position = targetPosition; // Snap to exact position
+                animator.SetBool("isWalking", false);
             }
         }
     }
