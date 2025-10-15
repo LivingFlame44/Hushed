@@ -18,8 +18,8 @@ public class PanelManager : MonoBehaviour
     public ButtonGroupManager buttonGroupManager;
 
     [Header("Animation Settings")]
-    public float slideDistance = 300f;
-    public float animationDuration = 0.3f;
+    public float slideDistance = 30f;
+    public float animationDuration = 0.2f;
 
     private RectTransform currentPanel;
     private bool isAnimating = false;
