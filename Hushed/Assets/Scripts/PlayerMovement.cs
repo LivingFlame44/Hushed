@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.WALKHOLDING:
-                animator.SetFloat("Horizontal", horizontal != 0 ? 2 : 0);
+                animator.SetFloat("Horizontal", horizontal != 0 ? 2 : -2);
                 break;
             default:
                 animator.SetFloat("Horizontal", horizontal != 0 ? 1 : 0);

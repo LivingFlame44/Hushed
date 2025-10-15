@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Used Scenes/Level 2.3.unity
     guid: c65a57c899e5119479f5d7295c909b76
   - enabled: 1
-    path: Assets/Scenes/Used Scenes/Level 3 Corrupted.unity
+    path: Assets/Scenes/Used Scenes/Dupes/Level 3 Corrupted.unity
     guid: 367f8785020a03b4bb68393d9526000a
   m_configObjects: {}

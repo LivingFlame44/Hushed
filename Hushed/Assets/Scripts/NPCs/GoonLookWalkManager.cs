@@ -17,7 +17,7 @@ public class GoonLookWalkManager : MonoBehaviour
     public Vector3 startingPos, playerStartPos;
 
     public float speed;
-    public GoonerState state;
+    public GoonerState state = GoonerState.Idle;
     public enum GoonerState
     {
         Processing,
@@ -94,6 +94,9 @@ public class GoonLookWalkManager : MonoBehaviour
         gooners[1].GetComponent<Animator>().SetBool("looking", false);
         StartCoroutine(LookBackInterval());
         state = GoonerState.Walking;
+        gooners[0].GetComponent<Animator>().SetBool("isWalking", true);
+        gooners[1].GetComponent<Animator>().SetBool("isWalking", true);
+
     }
 
     private void OnTriggerEnter(Collider other)

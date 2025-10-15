@@ -33,7 +33,8 @@ public class LRTChaseManager : MonoBehaviour
         Walking,
         Normal,
         Faster,
-        Idle
+        Idle,
+        Sprint
     }
 
     public enum PlayerState
@@ -57,6 +58,9 @@ public class LRTChaseManager : MonoBehaviour
         playerState = PlayerState.Walking;
         StartCoroutine(IntervalTimer());
         goonerState = GoonerState.Faster;
+
+        goons.transform.GetChild(0).GetComponent<Animator>().SetBool("isRunning", true);
+        goons.transform.GetChild(1).GetComponent<Animator>().SetBool("isRunning", true);
     }
 
     // Update is called once per frame
@@ -80,12 +84,17 @@ public class LRTChaseManager : MonoBehaviour
                 GoonRun();
                 break;
             case GoonerState.Idle:
+                goons.transform.GetChild(0).GetComponent<Animator>().SetBool("isRunning", false);
+                goons.transform.GetChild(1).GetComponent<Animator>().SetBool("isRunning", false);
                 break;
             case GoonerState.Faster:
                 goonSpeed = 5;
                 GoonRun();
                 break;
             case GoonerState.Processing:
+                break;
+            case GoonerState.Sprint:
+
                 break;
         }
 

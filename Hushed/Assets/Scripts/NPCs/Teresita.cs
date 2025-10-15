@@ -27,6 +27,11 @@ public class Teresita : MonoBehaviour
         animator.SetBool("isCrying", isCrying);
     }
 
+    public void TeresitaDrink() 
+    {
+        animator.SetBool("isDrinking", true);
+    }
+
     public void TeresitaSit()
     {
         switch (isSitting)
