@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 114bd5b381c75cf459d7c3258f8ba435
+guid: d0eb42b0f7b80464c89e9e12f059c321
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal - LightGray
-    second: {fileID: 2100000, guid: 63ccc68af8878aa4b8f1e8b4288351d2, type: 2}
+      name: Fence - Barbed Wire
+    second: {fileID: 2100000, guid: bc1ade54a1d41c0439fe0f19066609f6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plastic - Blue
-    second: {fileID: 2100000, guid: 9d67f2167642f0242a302d2ea3c37a4b, type: 2}
+      name: Fence - Chainlink
+    second: {fileID: 2100000, guid: d4357e2a02ec83844829f95abb041991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - LightGray
+    second: {fileID: 2100000, guid: 63ccc68af8878aa4b8f1e8b4288351d2, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 1
+    materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

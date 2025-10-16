@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 114bd5b381c75cf459d7c3258f8ba435
+guid: c41a9d9ece722794f8f783fe0d1c76d5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,17 +7,22 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal - LightGray
-    second: {fileID: 2100000, guid: 63ccc68af8878aa4b8f1e8b4288351d2, type: 2}
+      name: Metal - Black
+    second: {fileID: 2100000, guid: 0a6818b9b13ccac458b73f5dcc79ce63, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plastic - Blue
-    second: {fileID: 2100000, guid: 9d67f2167642f0242a302d2ea3c37a4b, type: 2}
+      name: Shutter - Door
+    second: {fileID: 2100000, guid: 3f83225382ba2ef468f68d83a7973aba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window - Material
+    second: {fileID: 2100000, guid: c29c1307af957184c989b3faedb605c0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 1
-    materialSearch: 1
+    materialSearch: 0
     materialLocation: 0
   animations:
     legacyGenerateAnimations: 4

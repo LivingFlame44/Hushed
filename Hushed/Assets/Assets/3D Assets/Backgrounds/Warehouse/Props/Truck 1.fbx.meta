@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 114bd5b381c75cf459d7c3258f8ba435
+guid: 07c8a03438a3fd24897a4b0bb0de86fe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - Black
+    second: {fileID: 2100000, guid: 561c3d8e3051aea43af7b0e18430a774, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - DarkGray
+    second: {fileID: 2100000, guid: 0a6818b9b13ccac458b73f5dcc79ce63, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -12,13 +22,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plastic - Blue
-    second: {fileID: 2100000, guid: 9d67f2167642f0242a302d2ea3c37a4b, type: 2}
+      name: Window - Material
+    second: {fileID: 2100000, guid: c29c1307af957184c989b3faedb605c0, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 1
+    materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
