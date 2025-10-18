@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
-  m_Name: 01 Narrow Maps
+  m_Name: "02 You Received Miguel\u2019s Borrow Log"
   m_EditorClassIdentifier: 
-  notificationID: 1
-  notificationInfo: '"Narrow the list of maps"'
-  notificationType: 2
+  notificationID: 2
+  notificationInfo: "You Received:\n\u201CMiguel\u2019s Borrow Log\u201D"
+  notificationType: 3

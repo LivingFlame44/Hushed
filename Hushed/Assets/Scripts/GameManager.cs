@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         switch(gameState)
         {
             case GameState.ACTIVE:
-                player.SetActive(true);
+                //player.SetActive(true);
                 Time.timeScale = 1f;
                 break;
             case GameState.GAMEOVER:

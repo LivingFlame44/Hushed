@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24d41884ee8745488faf0773bc005fc, type: 3}
-  m_Name: 04 Access storage
+  m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
+  m_Name: 01 Library Entrance Sheet
   m_EditorClassIdentifier: 
-  objectiveID: 4
-  objectiveInfo: -Access the storage room.
-  objectiveComplete: 0
-  prerequisiteObjectiveIDs: 
-  onObjectiveStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  notificationID: 1
+  notificationInfo: "You Received:\n\u201CLibrary Entrance Sheet\u201D"
+  notificationType: 3

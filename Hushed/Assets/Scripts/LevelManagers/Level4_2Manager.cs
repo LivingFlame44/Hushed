@@ -39,7 +39,24 @@ public class Level4_2Manager : MonoBehaviour
         if (keyQuestionsSolved >= 2)
         {
             NotebookManager.instance.CloseNotebook();
-            dialogueLines[0].GetComponentAtIndex<DialogueTrigger>(4).TriggerDialogue();
+            level4_2Events[1].Invoke();
         }
+    }
+
+    public void ChangeScene()
+    {
+        if (AsyncManager.instance == null)
+        {
+            SceneManager.LoadScene("Level 4.2");
+        }
+        else
+        {
+            AsyncManager.instance.LoadScene("Level 4.2");
+        }
+    }
+
+    public void GuardInteracted()
+    {
+        guardInteracted = true;
     }
 }

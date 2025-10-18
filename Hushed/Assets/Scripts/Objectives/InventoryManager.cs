@@ -59,19 +59,38 @@ public class InventoryManager : MonoBehaviour
         itemInfoInspectBtn.onClick.AddListener(NotebookManager.instance.CloseNotebook);
     }
 
+    public bool CheckDuplicate(Item item)
+    {
+        for(int i = 0; i < activeItemBtnList.Count; i++)
+        {
+            if(activeItemBtnList[i].GetComponent<InventoryItemButton>().item == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public void UnlockItem(int itemID)
     {
         Item item = items[itemID];
-        inventory.Add(item);
+        if (CheckDuplicate(item))
+        {
 
-        itemContainerPanel.SetActive(true);
+        }
+        else
+        {
+            inventory.Add(item);
 
-        GameObject itemBtn = InstantiateItemButton();
+            itemContainerPanel.SetActive(true);
 
-        itemBtn.GetComponent<InventoryItemButton>().item = item;
-        itemBtn.GetComponent<Image>().sprite = item.itemImage;
+            GameObject itemBtn = InstantiateItemButton();
 
-        LevelData.instance.items.Add(itemID);
+            itemBtn.GetComponent<InventoryItemButton>().item = item;
+            itemBtn.GetComponent<Image>().sprite = item.itemImage;
+
+            LevelData.instance.items.Add(itemID);
+        }
+            
     }
 
     public void RemoveItem(int itemID)

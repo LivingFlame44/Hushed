@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ComputerSearch : MonoBehaviour
@@ -10,6 +11,7 @@ public class ComputerSearch : MonoBehaviour
     public string keyword;
     public GameObject panelToOpen, noResultPanel;
 
+    public List<UnityEvent> librarySearchEvents = new List<UnityEvent>();
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +31,12 @@ public class ComputerSearch : MonoBehaviour
     {
         if(searchBar.text.ToLower() == keyword )
         {
-            panelToOpen.SetActive(true);
-            noResultPanel.SetActive(false);
+            librarySearchEvents[0].Invoke();
         }
 
         else 
         {
-            noResultPanel.SetActive(true);
+            librarySearchEvents[1].Invoke();
         }
     }
 }

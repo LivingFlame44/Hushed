@@ -114,7 +114,7 @@ public class EvidenceCraftingManager : MonoBehaviour
         newEvidenceBtn.SetActive(true);
 
         newEvidenceBtn.GetComponentInChildren<TextMeshProUGUI>().text = evidence.evidenceName;
-
+        newEvidenceBtn.GetComponentInChildren<Image>().sprite = evidence.evidenceImage;
         //assign new image
         newEvidenceBtn.GetComponentInChildren<Button>().onClick.RemoveAllListeners();
         newEvidenceBtn.GetComponentInChildren<Button>().onClick.AddListener(() => CollectCraftedEvidence(evidence));

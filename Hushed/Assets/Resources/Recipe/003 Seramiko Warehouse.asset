@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
-  m_Name: 00 Narrow down
+  m_Script: {fileID: 11500000, guid: 7b7e22f5b5adcc640897e2e2416d87de, type: 3}
+  m_Name: 003 Seramiko Warehouse
   m_EditorClassIdentifier: 
-  notificationID: 0
-  notificationInfo: '"Narrow down the list of places to search."'
-  notificationType: 2
+  craftedEvidence: {fileID: 11400000, guid: b5d0db48509b6b44c8bfb120af43e185, type: 2}
+  evidenceRecipe: 0d0000000f00000000000000

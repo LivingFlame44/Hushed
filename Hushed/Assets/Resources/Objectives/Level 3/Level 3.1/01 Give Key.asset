@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a55856b60451d4a958c78ead255281, type: 3}
-  m_Name: 03 Access storage room
+  m_Script: {fileID: 11500000, guid: c24d41884ee8745488faf0773bc005fc, type: 3}
+  m_Name: 01 Give Key
   m_EditorClassIdentifier: 
-  notificationID: 3
-  notificationInfo: '"Access the storage room"'
-  notificationType: 2
+  objectiveID: 1
+  objectiveInfo: -Give the key to the librarian
+  objectiveComplete: 0
+  prerequisiteObjectiveIDs: 
+  onObjectiveStartEvent:
+    m_PersistentCalls:
+      m_Calls: []

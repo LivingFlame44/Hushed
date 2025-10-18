@@ -34,4 +34,9 @@ public class TalkInteract : Interactable
         trigger.enabled = true;
 
     }
+
+    public void SpecifyDialogue(int index)
+    {
+        talkIndex = index;
+    }
 }

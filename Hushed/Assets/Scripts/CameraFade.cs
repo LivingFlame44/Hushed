@@ -25,39 +25,59 @@ public class CameraFade : MonoBehaviour
     {
         if (startFadedOut) alpha = 1f; else alpha = 0f;
         texture = new Texture2D(1, 1);
-        texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
-        texture.Apply();
+        texture.wrapMode = TextureWrapMode.Repeat;
+        UpdateTextureColor();
     }
 
     private void Update()
     {
-        if (direction == 0 && Input.GetKeyDown(key))
-        {
-            if (alpha >= 1f) // Fully faded out
-            {
-                alpha = 1f;
-                time = 0f;
-                direction = 1;
-            }
-            else // Fully faded in
-            {
-                alpha = 0f;
-                time = 1f;
-                direction = -1;
-            }
+        //if (direction == 0 && Input.GetKeyDown(key))
+        //{
+        //    if (alpha >= 1f) // Fully faded out
+        //    {
+        //        alpha = 1f;
+        //        time = 0f;
+        //        direction = 1;
+        //    }
+        //    else // Fully faded in
+        //    {
+        //        alpha = 0f;
+        //        time = 1f;
+        //        direction = -1;
+        //    }
 
+        //}
+    }
+
+    private void UpdateTextureColor()
+    {
+        if (texture != null)
+        {
+            texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
+            texture.Apply();
         }
     }
     public void OnGUI()
     {
-        if (alpha > 0f) GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
+        // Always draw the texture if alpha > 0, regardless of direction
+        if (alpha > 0f)
+        {
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
+        }
+
         if (direction != 0)
         {
             time += direction * Time.deltaTime * speedScale;
             alpha = Curve.Evaluate(time);
-            texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
-            texture.Apply();
-            if (alpha <= 0f || alpha >= 1f) direction = 0;
+            UpdateTextureColor(); // Update texture with new alpha
+
+            if (alpha <= 0f || alpha >= 1f)
+            {
+                direction = 0;
+                // Ensure final alpha is exactly 0 or 1
+                alpha = Mathf.Clamp01(alpha);
+                UpdateTextureColor();
+            }
         }
     }
 
@@ -162,5 +182,53 @@ public class CameraFade : MonoBehaviour
                 StopCoroutine(FadeOutTimer());
             }
         }
+    }
+
+    public void ExecuteEventAfterFade(int eventIndex)
+    {
+        if (eventIndex < 0 || eventIndex >= eventAfterFade.Length)
+        {
+            Debug.LogWarning($"Event index {eventIndex} is out of range!");
+            return;
+        }
+
+        // Start fading out if not already black
+        if (alpha < 1f)
+        {
+            StartCoroutine(FadeOutAndExecuteEvent(eventIndex));
+        }
+        else // Already faded to black, execute immediately
+        {
+            eventAfterFade[eventIndex].Invoke();
+        }
+    }
+
+    private IEnumerator FadeOutAndExecuteEvent(int eventIndex)
+    {
+        clickBlockPanel.SetActive(true);
+
+        // Start fade out
+        if (direction == 0 && alpha < 1f)
+        {
+            alpha = 0f;
+            time = 1f;
+            direction = -1;
+        }
+
+        // Wait until fully faded to black (alpha >= 1f)
+        while (alpha < 1f)
+        {
+            yield return null;
+        }
+
+        // Ensure we're fully black
+        direction = 0;
+        alpha = 1f;
+        UpdateTextureColor();
+
+        // Execute the event
+        eventAfterFade[eventIndex].Invoke();
+
+        clickBlockPanel.SetActive(false);
     }
 }

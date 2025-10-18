@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
         RESET
     }
 
+    public Transform excludedChild;
+    private Vector3 excludedWorldPosition;
+    private Quaternion excludedWorldRotation;
+    private Vector3 excludedLocalScale;
+
+
     public PlayerState playerState;
 
     public Rigidbody rb;
@@ -180,11 +186,41 @@ public class PlayerMovement : MonoBehaviour
     void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
+        {          
+
             isFacingRight = !isFacingRight;
-            Vector2 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+
+            if (excludedChild != null)
+            {
+                // Store ALL transform data
+                excludedWorldPosition = excludedChild.position;
+                excludedWorldRotation = excludedChild.rotation;
+                excludedLocalScale = excludedChild.localScale;
+
+                // Temporarily remove from parent
+                Transform originalParent = excludedChild.parent;
+                int siblingIndex = excludedChild.GetSiblingIndex();
+                excludedChild.SetParent(null);
+
+                // Flip the parent
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+
+                // Re-add to parent and restore EVERYTHING
+                excludedChild.SetParent(originalParent);
+                excludedChild.SetSiblingIndex(siblingIndex);
+                excludedChild.position = excludedWorldPosition;
+                excludedChild.rotation = excludedWorldRotation;
+                excludedChild.localScale = excludedLocalScale;
+            }
+            else
+            {
+                // Flip normally if no excluded child
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
         }
     }
     private void FixedUpdate()
